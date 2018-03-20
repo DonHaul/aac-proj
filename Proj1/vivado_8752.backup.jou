@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Mar  5 23:36:45 2018
+# Process ID: 8752
+# Current directory: C:/Users/tomas/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3612
+# Log file: C:/Users/tomas/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/tomas/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project Lab1 C:/Users/tomas/Documents/AAC/Lab1/Lab1 -part xcku5p-ffvb676-2-e
+set_property board_part xilinx.com:kcu116:part0:1.2 [current_project]
+import_files -norecurse {C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/InstructionFetch.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/IDEX_Stage_Registers.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/Shifter.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/FunctionalUnit.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/Zero.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/RegisterFile.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/Decoder.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/MEMWB_Stage_Registers.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/WriteBack.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/ArithmeticUnitI.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/Memory.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/FiveStagePipeline.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/InstructionDecode.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/Execute.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/IFID_Stage_Registers.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/FullAdder.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/LogicUnit.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/ArithmeticUnit.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/InstructionMemory.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/DataMemory.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/SingleCycle.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/LogicUnitI.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/Buf.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/RegisterN.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/EXMEM_Stage_Registers.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/branchcontrol.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse {C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sim_1/imports/waveform_config/testSingleCycle_behav.wcfg C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sim_1/imports/waveform_config/testFiveStagePipeline_behav.wcfg}
+import_files -fileset sim_1 -norecurse {C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sim_1/imports/sim/testFiveStagePipeline.vhd C:/Users/tomas/Documents/AAC_Lab1/Project2.srcs/sim_1/imports/sim/testSingleCycle.vhd}
+update_compile_order -fileset sim_1
+set_property is_enabled false [get_files  C:/Users/tomas/Documents/AAC/Lab1/Lab1/Lab1.srcs/sim_1/imports/waveform_config/testFiveStagePipeline_behav.wcfg]
+set_property is_enabled false [get_files  C:/Users/tomas/Documents/AAC/Lab1/Lab1/Lab1.srcs/sim_1/imports/waveform_config/testSingleCycle_behav.wcfg]
+update_compile_order -fileset sim_1
+archive_project C:/Users/tomas/Documents/AAC/Lab1.xpr.zip -temp_dir C:/Users/tomas/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8752-PT-LAPTOP -force -exclude_run_results

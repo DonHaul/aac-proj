@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testSingleCycle_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="testSingleCycle" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="166126953fs"></ZoomEndTime>
+      <Cursor1Time time="2000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/testSingleCycle/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testSingleCycle/CountCycles" type="other">
+      <obj_property name="ElementShortName">CountCycles</obj_property>
+      <obj_property name="ObjectShortName">CountCycles</obj_property>
+   </wvobject>
+   <wvobject fp_name="group1486" type="group">
+      <obj_property name="label">IF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="divider" fp_name="divider1402">
+         <obj_property name="label">IF Stage</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#D2691E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/CLK" type="logic">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/IFetch/PC" type="array">
+         <obj_property name="ElementShortName">PC[7:0]</obj_property>
+         <obj_property name="ObjectShortName">PC[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/IFetch/Instruction" type="array">
+         <obj_property name="ElementShortName">Instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Instruction[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/IFetch/PCplusOne" type="array">
+         <obj_property name="ElementShortName">PCplusOne[7:0]</obj_property>
+         <obj_property name="ObjectShortName">PCplusOne[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/IFetch/PCLoadEnable" type="logic">
+         <obj_property name="ElementShortName">PCLoadEnable</obj_property>
+         <obj_property name="ObjectShortName">PCLoadEnable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/IFetch/PCLoadValue" type="array">
+         <obj_property name="ElementShortName">PCLoadValue[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PCLoadValue[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/IFetch/NextPC" type="array">
+         <obj_property name="ElementShortName">NextPC[7:0]</obj_property>
+         <obj_property name="ObjectShortName">NextPC[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1487" type="group">
+      <obj_property name="label">ID</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="divider" fp_name="divider1403">
+         <obj_property name="label">ID Stage</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#D2691E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/CLK" type="logic">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider6790">
+         <obj_property name="label">Instruction Fields</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#DCDCDC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/Instruction" type="array">
+         <obj_property name="ElementShortName">Instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Instruction[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/Opcode" type="array">
+         <obj_property name="ElementShortName">Opcode[5:0]</obj_property>
+         <obj_property name="ObjectShortName">Opcode[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/DR" type="array">
+         <obj_property name="ElementShortName">DR[3:0]</obj_property>
+         <obj_property name="ObjectShortName">DR[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/SA" type="array">
+         <obj_property name="ElementShortName">SA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">SA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/SB" type="array">
+         <obj_property name="ElementShortName">SB[3:0]</obj_property>
+         <obj_property name="ObjectShortName">SB[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/BC" type="array">
+         <obj_property name="ElementShortName">BC[3:0]</obj_property>
+         <obj_property name="ObjectShortName">BC[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider6791">
+         <obj_property name="label">Decode Memory</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#DCDCDC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/PL" type="logic">
+         <obj_property name="ElementShortName">PL</obj_property>
+         <obj_property name="ObjectShortName">PL</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/dAA" type="array">
+         <obj_property name="ElementShortName">dAA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">dAA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/dBA" type="array">
+         <obj_property name="ElementShortName">dBA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">dBA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/dDA" type="array">
+         <obj_property name="ElementShortName">dDA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">dDA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/FS" type="array">
+         <obj_property name="ElementShortName">FS[3:0]</obj_property>
+         <obj_property name="ObjectShortName">FS[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/KNSSel" type="array">
+         <obj_property name="ElementShortName">KNSSel[2:0]</obj_property>
+         <obj_property name="ObjectShortName">KNSSel[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/MASel" type="array">
+         <obj_property name="ElementShortName">MASel[1:0]</obj_property>
+         <obj_property name="ObjectShortName">MASel[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/MBSel" type="array">
+         <obj_property name="ElementShortName">MBSel[1:0]</obj_property>
+         <obj_property name="ObjectShortName">MBSel[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/MMA" type="array">
+         <obj_property name="ElementShortName">MMA[1:0]</obj_property>
+         <obj_property name="ObjectShortName">MMA[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/MMB" type="array">
+         <obj_property name="ElementShortName">MMB[1:0]</obj_property>
+         <obj_property name="ObjectShortName">MMB[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/MW" type="logic">
+         <obj_property name="ElementShortName">MW</obj_property>
+         <obj_property name="ObjectShortName">MW</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/MDSel" type="array">
+         <obj_property name="ElementShortName">MDSel[1:0]</obj_property>
+         <obj_property name="ObjectShortName">MDSel[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider6792">
+         <obj_property name="label">(Other) Output Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#DCDCDC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/AA" type="array">
+         <obj_property name="ElementShortName">AA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">AA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/BA" type="array">
+         <obj_property name="ElementShortName">BA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">BA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/DA" type="array">
+         <obj_property name="ElementShortName">DA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">DA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/KNS" type="array">
+         <obj_property name="ElementShortName">KNS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">KNS[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/MA" type="logic">
+         <obj_property name="ElementShortName">MA</obj_property>
+         <obj_property name="ObjectShortName">MA</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/MB" type="logic">
+         <obj_property name="ElementShortName">MB</obj_property>
+         <obj_property name="ObjectShortName">MB</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/ID/MD" type="logic">
+         <obj_property name="ElementShortName">MD</obj_property>
+         <obj_property name="ObjectShortName">MD</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1488" type="group">
+      <obj_property name="label">EX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="divider" fp_name="divider1444">
+         <obj_property name="label">EX Stage</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#D2691E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/CLK" type="logic">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider6811">
+         <obj_property name="label">Input</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#DCDCDC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/A" type="array">
+         <obj_property name="ElementShortName">A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">A[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/B" type="array">
+         <obj_property name="ElementShortName">B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">B[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/KNS" type="array">
+         <obj_property name="ElementShortName">KNS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">KNS[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/MA" type="logic">
+         <obj_property name="ElementShortName">MA</obj_property>
+         <obj_property name="ObjectShortName">MA</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/MB" type="logic">
+         <obj_property name="ElementShortName">MB</obj_property>
+         <obj_property name="ObjectShortName">MB</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider6810">
+         <obj_property name="label">Functional Unit (ALU)</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#DCDCDC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/OpA" type="array">
+         <obj_property name="ElementShortName">OpA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">OpA[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/OpB" type="array">
+         <obj_property name="ElementShortName">OpB[31:0]</obj_property>
+         <obj_property name="ObjectShortName">OpB[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/FS" type="array">
+         <obj_property name="ElementShortName">FS[3:0]</obj_property>
+         <obj_property name="ObjectShortName">FS[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/DataD" type="array">
+         <obj_property name="ElementShortName">DataD[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DataD[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/Flags" type="array">
+         <obj_property name="ElementShortName">Flags[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Flags[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider6812">
+         <obj_property name="label">Branch Control</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#DCDCDC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/PL" type="logic">
+         <obj_property name="ElementShortName">PL</obj_property>
+         <obj_property name="ObjectShortName">PL</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/BC" type="array">
+         <obj_property name="ElementShortName">BC[3:0]</obj_property>
+         <obj_property name="ObjectShortName">BC[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/PC" type="array">
+         <obj_property name="ElementShortName">PC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/AD" type="array">
+         <obj_property name="ElementShortName">AD[31:0]</obj_property>
+         <obj_property name="ObjectShortName">AD[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/PCLoadEnable" type="logic">
+         <obj_property name="ElementShortName">PCLoadEnable</obj_property>
+         <obj_property name="ObjectShortName">PCLoadEnable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/EX/PCLoadValue" type="array">
+         <obj_property name="ElementShortName">PCLoadValue[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PCLoadValue[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1489" type="group">
+      <obj_property name="label">MEM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="divider" fp_name="divider1476">
+         <obj_property name="label">MEM Stage</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#D2691E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/CLK" type="logic">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider6827">
+         <obj_property name="label">Input</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#DCDCDC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/MEM/KNS" type="array">
+         <obj_property name="ElementShortName">KNS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">KNS[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/MEM/A" type="array">
+         <obj_property name="ElementShortName">A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">A[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/MEM/B" type="array">
+         <obj_property name="ElementShortName">B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">B[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/MEM/Din" type="array">
+         <obj_property name="ElementShortName">Din[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Din[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/MEM/MMA" type="array">
+         <obj_property name="ElementShortName">MMA[1:0]</obj_property>
+         <obj_property name="ObjectShortName">MMA[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/MEM/MMB" type="array">
+         <obj_property name="ElementShortName">MMB[1:0]</obj_property>
+         <obj_property name="ObjectShortName">MMB[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider6826">
+         <obj_property name="label">Memory Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#DCDCDC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/MEM/Address" type="array">
+         <obj_property name="ElementShortName">Address[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Address[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/MEM/MemDataIn" type="array">
+         <obj_property name="ElementShortName">MemDataIn[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MemDataIn[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/MEM/MW" type="logic">
+         <obj_property name="ElementShortName">MW</obj_property>
+         <obj_property name="ObjectShortName">MW</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/MEM/Dout" type="array">
+         <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1490" type="group">
+      <obj_property name="label">WB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="divider" fp_name="divider1477">
+         <obj_property name="label">WB Stage</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#D2691E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/CLK" type="logic">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/WB/ALUData" type="array">
+         <obj_property name="ElementShortName">ALUData[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUData[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/WB/MemData" type="array">
+         <obj_property name="ElementShortName">MemData[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MemData[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/WB/MD" type="logic">
+         <obj_property name="ElementShortName">MD</obj_property>
+         <obj_property name="ObjectShortName">MD</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/WB/DA" type="array">
+         <obj_property name="ElementShortName">DA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">DA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/WB/RFData" type="array">
+         <obj_property name="ElementShortName">RFData[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RFData[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group6835" type="group">
+      <obj_property name="label">RF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="divider" fp_name="divider6860">
+         <obj_property name="label">Register File</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#D2691E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/CLK" type="logic">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider6859">
+         <obj_property name="label">Operand Read</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#DCDCDC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/AA" type="array">
+         <obj_property name="ElementShortName">AA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">AA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/BA" type="array">
+         <obj_property name="ElementShortName">BA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">BA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/A" type="array">
+         <obj_property name="ElementShortName">A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">A[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/B" type="array">
+         <obj_property name="ElementShortName">B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">B[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider6862">
+         <obj_property name="label">Register Write</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#DCDCDC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/DA" type="array">
+         <obj_property name="ElementShortName">DA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">DA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Data" type="array">
+         <obj_property name="ElementShortName">Data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider6861">
+         <obj_property name="label">Register Values</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#008000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q0" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q0[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q0[31:0]</obj_property>
+         <obj_property name="label">R0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q1" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q1[31:0]</obj_property>
+         <obj_property name="label">R1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q2" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q2[31:0]</obj_property>
+         <obj_property name="label">R2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q3" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q3[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q3[31:0]</obj_property>
+         <obj_property name="label">R3</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q4" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q4[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q4[31:0]</obj_property>
+         <obj_property name="label">R4</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q5" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q5[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q5[31:0]</obj_property>
+         <obj_property name="label">R5</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q6" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q6[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q6[31:0]</obj_property>
+         <obj_property name="label">R6</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q7" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q7[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q7[31:0]</obj_property>
+         <obj_property name="label">R7</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q8" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q8[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q8[31:0]</obj_property>
+         <obj_property name="label">R8</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q9" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q9[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q9[31:0]</obj_property>
+         <obj_property name="label">R9</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q10" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q10[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q10[31:0]</obj_property>
+         <obj_property name="label">R10</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q11" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q11[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q11[31:0]</obj_property>
+         <obj_property name="label">R11</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q12" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q12[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q12[31:0]</obj_property>
+         <obj_property name="label">R12</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q13" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q13[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q13[31:0]</obj_property>
+         <obj_property name="label">R13</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q14" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q14[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q14[31:0]</obj_property>
+         <obj_property name="label">R14</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testSingleCycle/Processor/RF/Q15" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q15[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q15[31:0]</obj_property>
+         <obj_property name="label">R15</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testFiveStagePipeline_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="testFiveStagePipeline" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="156298253fs"></ZoomEndTime>
+      <Cursor1Time time="7284000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/testFiveStagePipeline/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testFiveStagePipeline/CountCycles" type="other">
+      <obj_property name="ElementShortName">CountCycles</obj_property>
+      <obj_property name="ObjectShortName">CountCycles</obj_property>
+   </wvobject>
+   <wvobject fp_name="group1486" type="group">
+      <obj_property name="label">IF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="divider" fp_name="divider1402">
+         <obj_property name="label">IF Stage</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#D2691E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/CLK" type="logic">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/IF_PC" type="array">
+         <obj_property name="ElementShortName">IF_PC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">IF_PC[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/IF_Instruction" type="array">
+         <obj_property name="ElementShortName">IF_Instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">IF_Instruction[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/IFetch/PCplusOne" type="array">
+         <obj_property name="ElementShortName">PCplusOne[7:0]</obj_property>
+         <obj_property name="ObjectShortName">PCplusOne[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/IFetch/PCLoadEnable" type="logic">
+         <obj_property name="ElementShortName">PCLoadEnable</obj_property>
+         <obj_property name="ObjectShortName">PCLoadEnable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/IFetch/PCLoadValue" type="array">
+         <obj_property name="ElementShortName">PCLoadValue[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PCLoadValue[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/IFetch/NextPC" type="array">
+         <obj_property name="ElementShortName">NextPC[7:0]</obj_property>
+         <obj_property name="ObjectShortName">NextPC[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1487" type="group">
+      <obj_property name="label">ID</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="divider" fp_name="divider1403">
+         <obj_property name="label">ID Stage</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#D2691E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/CLK" type="logic">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_PC" type="array">
+         <obj_property name="ElementShortName">ID_PC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_PC[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_Instruction" type="array">
+         <obj_property name="ElementShortName">ID_Instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_Instruction[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_AA" type="array">
+         <obj_property name="ElementShortName">ID_AA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_AA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_BA" type="array">
+         <obj_property name="ElementShortName">ID_BA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_BA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_KNS" type="array">
+         <obj_property name="ElementShortName">ID_KNS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_KNS[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_MA" type="logic">
+         <obj_property name="ElementShortName">ID_MA</obj_property>
+         <obj_property name="ObjectShortName">ID_MA</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_MB" type="logic">
+         <obj_property name="ElementShortName">ID_MB</obj_property>
+         <obj_property name="ObjectShortName">ID_MB</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_A" type="array">
+         <obj_property name="ElementShortName">ID_A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_A[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_B" type="array">
+         <obj_property name="ElementShortName">ID_B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_B[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_FS" type="array">
+         <obj_property name="ElementShortName">ID_FS[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_FS[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_MMA" type="array">
+         <obj_property name="ElementShortName">ID_MMA[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_MMA[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_MMB" type="array">
+         <obj_property name="ElementShortName">ID_MMB[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_MMB[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_MW" type="logic">
+         <obj_property name="ElementShortName">ID_MW</obj_property>
+         <obj_property name="ObjectShortName">ID_MW</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_MD" type="logic">
+         <obj_property name="ElementShortName">ID_MD</obj_property>
+         <obj_property name="ObjectShortName">ID_MD</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_DA" type="array">
+         <obj_property name="ElementShortName">ID_DA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_DA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_PL" type="logic">
+         <obj_property name="ElementShortName">ID_PL</obj_property>
+         <obj_property name="ObjectShortName">ID_PL</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_BC" type="array">
+         <obj_property name="ElementShortName">ID_BC[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_BC[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1488" type="group">
+      <obj_property name="label">EX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="divider" fp_name="divider1444">
+         <obj_property name="label">EX Stage</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#D2691E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/CLK" type="logic">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_PC" type="array">
+         <obj_property name="ElementShortName">EX_PC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">EX_PC[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_Instruction" type="array">
+         <obj_property name="ElementShortName">EX_Instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">EX_Instruction[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_A" type="array">
+         <obj_property name="ElementShortName">EX_A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">EX_A[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_B" type="array">
+         <obj_property name="ElementShortName">EX_B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">EX_B[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_KNS" type="array">
+         <obj_property name="ElementShortName">EX_KNS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">EX_KNS[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_MA" type="logic">
+         <obj_property name="ElementShortName">EX_MA</obj_property>
+         <obj_property name="ObjectShortName">EX_MA</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_MB" type="logic">
+         <obj_property name="ElementShortName">EX_MB</obj_property>
+         <obj_property name="ObjectShortName">EX_MB</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_FS" type="array">
+         <obj_property name="ElementShortName">EX_FS[3:0]</obj_property>
+         <obj_property name="ObjectShortName">EX_FS[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_ALUData" type="array">
+         <obj_property name="ElementShortName">EX_ALUData[31:0]</obj_property>
+         <obj_property name="ObjectShortName">EX_ALUData[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_PL" type="logic">
+         <obj_property name="ElementShortName">EX_PL</obj_property>
+         <obj_property name="ObjectShortName">EX_PL</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_BC" type="array">
+         <obj_property name="ElementShortName">EX_BC[3:0]</obj_property>
+         <obj_property name="ObjectShortName">EX_BC[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_PCLoadValue" type="array">
+         <obj_property name="ElementShortName">EX_PCLoadValue[31:0]</obj_property>
+         <obj_property name="ObjectShortName">EX_PCLoadValue[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_MMA" type="array">
+         <obj_property name="ElementShortName">EX_MMA[1:0]</obj_property>
+         <obj_property name="ObjectShortName">EX_MMA[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_MMB" type="array">
+         <obj_property name="ElementShortName">EX_MMB[1:0]</obj_property>
+         <obj_property name="ObjectShortName">EX_MMB[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_MW" type="logic">
+         <obj_property name="ElementShortName">EX_MW</obj_property>
+         <obj_property name="ObjectShortName">EX_MW</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_MD" type="logic">
+         <obj_property name="ElementShortName">EX_MD</obj_property>
+         <obj_property name="ObjectShortName">EX_MD</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/EX_DA" type="array">
+         <obj_property name="ElementShortName">EX_DA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">EX_DA[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1489" type="group">
+      <obj_property name="label">MEM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="divider" fp_name="divider1476">
+         <obj_property name="label">MEM Stage</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#D2691E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/CLK" type="logic">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/MEM_PC" type="array">
+         <obj_property name="ElementShortName">MEM_PC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_PC[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/MEM_Instruction" type="array">
+         <obj_property name="ElementShortName">MEM_Instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_Instruction[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/MEM_KNS" type="array">
+         <obj_property name="ElementShortName">MEM_KNS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_KNS[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/MEM_A" type="array">
+         <obj_property name="ElementShortName">MEM_A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_A[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/MEM_B" type="array">
+         <obj_property name="ElementShortName">MEM_B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_B[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/MEM_MMA" type="array">
+         <obj_property name="ElementShortName">MEM_MMA[1:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_MMA[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/MEM_MMB" type="array">
+         <obj_property name="ElementShortName">MEM_MMB[1:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_MMB[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/MEM_MW" type="logic">
+         <obj_property name="ElementShortName">MEM_MW</obj_property>
+         <obj_property name="ObjectShortName">MEM_MW</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/MEM_DA" type="array">
+         <obj_property name="ElementShortName">MEM_DA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_DA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/MEM_MD" type="logic">
+         <obj_property name="ElementShortName">MEM_MD</obj_property>
+         <obj_property name="ObjectShortName">MEM_MD</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/MEM_ALUData" type="array">
+         <obj_property name="ElementShortName">MEM_ALUData[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_ALUData[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/MEM_MemData" type="array">
+         <obj_property name="ElementShortName">MEM_MemData[31:0]</obj_property>
+         <obj_property name="ObjectShortName">MEM_MemData[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1490" type="group">
+      <obj_property name="label">WB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="divider" fp_name="divider1477">
+         <obj_property name="label">WB Stage</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#D2691E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/CLK" type="logic">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/WB_PC" type="array">
+         <obj_property name="ElementShortName">WB_PC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">WB_PC[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/WB_Instruction" type="array">
+         <obj_property name="ElementShortName">WB_Instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">WB_Instruction[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/WB_ALUData" type="array">
+         <obj_property name="ElementShortName">WB_ALUData[31:0]</obj_property>
+         <obj_property name="ObjectShortName">WB_ALUData[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/WB_MemData" type="array">
+         <obj_property name="ElementShortName">WB_MemData[31:0]</obj_property>
+         <obj_property name="ObjectShortName">WB_MemData[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/WB_MD" type="logic">
+         <obj_property name="ElementShortName">WB_MD</obj_property>
+         <obj_property name="ObjectShortName">WB_MD</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/WB_DA" type="array">
+         <obj_property name="ElementShortName">WB_DA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">WB_DA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/WB_RFData" type="array">
+         <obj_property name="ElementShortName">WB_RFData[31:0]</obj_property>
+         <obj_property name="ObjectShortName">WB_RFData[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group7344" type="group">
+      <obj_property name="label">RF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="divider" fp_name="divider7345">
+         <obj_property name="label">Register File</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#D2691E</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/CLK" type="logic">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider7347">
+         <obj_property name="label">Operand Read (ID)</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#DCDCDC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_PC" type="array">
+         <obj_property name="ElementShortName">ID_PC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_PC[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/ID_Instruction" type="array">
+         <obj_property name="ElementShortName">ID_Instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ID_Instruction[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/AA" type="array">
+         <obj_property name="ElementShortName">AA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">AA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/BA" type="array">
+         <obj_property name="ElementShortName">BA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">BA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/A" type="array">
+         <obj_property name="ElementShortName">A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">A[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/B" type="array">
+         <obj_property name="ElementShortName">B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">B[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider7348">
+         <obj_property name="label">Register Write (WB)</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#DCDCDC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/WB_PC" type="array">
+         <obj_property name="ElementShortName">WB_PC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">WB_PC[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/WB_Instruction" type="array">
+         <obj_property name="ElementShortName">WB_Instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">WB_Instruction[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/DA" type="array">
+         <obj_property name="ElementShortName">DA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">DA[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Data" type="array">
+         <obj_property name="ElementShortName">Data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider7346">
+         <obj_property name="label">Register Values</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="BkColor">#DCDCDC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q0" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q0[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q0[31:0]</obj_property>
+         <obj_property name="label">R0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q1" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q1[31:0]</obj_property>
+         <obj_property name="label">R1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q2" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q2[31:0]</obj_property>
+         <obj_property name="label">R2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q3" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q3[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q3[31:0]</obj_property>
+         <obj_property name="label">R3</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q4" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q4[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q4[31:0]</obj_property>
+         <obj_property name="label">R4</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q5" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q5[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q5[31:0]</obj_property>
+         <obj_property name="label">R5</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q6" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q6[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q6[31:0]</obj_property>
+         <obj_property name="label">R6</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q7" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q7[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q7[31:0]</obj_property>
+         <obj_property name="label">R7</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q8" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q8[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q8[31:0]</obj_property>
+         <obj_property name="label">R8</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q9" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q9[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q9[31:0]</obj_property>
+         <obj_property name="label">R9</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q10" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q10[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q10[31:0]</obj_property>
+         <obj_property name="label">R10</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q11" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q11[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q11[31:0]</obj_property>
+         <obj_property name="label">R11</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q12" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q12[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q12[31:0]</obj_property>
+         <obj_property name="label">R12</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q13" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q13[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q13[31:0]</obj_property>
+         <obj_property name="label">R13</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q14" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q14[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q14[31:0]</obj_property>
+         <obj_property name="label">R14</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testFiveStagePipeline/Processor/RF/Q15" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q15[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q15[31:0]</obj_property>
+         <obj_property name="label">R15</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
