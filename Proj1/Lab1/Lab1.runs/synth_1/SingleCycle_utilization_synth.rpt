@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Tue Mar 27 15:32:43 2018
+| Date         : Tue Mar 27 19:44:14 2018
 | Host         : LAPTOP-CDVS80OJ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file SingleCycle_utilization_synth.rpt -pb SingleCycle_utilization_synth.pb
 | Design       : SingleCycle
@@ -28,40 +28,40 @@ Table of Contents
 1. CLB Logic
 ------------
 
-+-------------------------+------+-------+-----------+-------+
-|        Site Type        | Used | Fixed | Available | Util% |
-+-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               |  184 |     0 |    216960 |  0.08 |
-|   LUT as Logic          |  184 |     0 |    216960 |  0.08 |
-|   LUT as Memory         |    0 |     0 |     99840 |  0.00 |
-| CLB Registers           |   72 |     0 |    433920 |  0.02 |
-|   Register as Flip Flop |   72 |     0 |    433920 |  0.02 |
-|   Register as Latch     |    0 |     0 |    433920 |  0.00 |
-| CARRY8                  |    0 |     0 |     27120 |  0.00 |
-| F7 Muxes                |    0 |     0 |    108480 |  0.00 |
-| F8 Muxes                |    0 |     0 |     54240 |  0.00 |
-| F9 Muxes                |    0 |     0 |     27120 |  0.00 |
-+-------------------------+------+-------+-----------+-------+
++-------------------------+--------+-------+-----------+-------+
+|        Site Type        |  Used  | Fixed | Available | Util% |
++-------------------------+--------+-------+-----------+-------+
+| CLB LUTs*               |  42281 |     0 |    216960 | 19.49 |
+|   LUT as Logic          |  42281 |     0 |    216960 | 19.49 |
+|   LUT as Memory         |      0 |     0 |     99840 |  0.00 |
+| CLB Registers           | 131560 |     0 |    433920 | 30.32 |
+|   Register as Flip Flop | 131560 |     0 |    433920 | 30.32 |
+|   Register as Latch     |      0 |     0 |    433920 |  0.00 |
+| CARRY8                  |      0 |     0 |     27120 |  0.00 |
+| F7 Muxes                |  17483 |     0 |    108480 | 16.12 |
+| F8 Muxes                |   8741 |     0 |     54240 | 16.12 |
+| F9 Muxes                |      0 |     0 |     27120 |  0.00 |
++-------------------------+--------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
 1.1 Summary of Registers by Type
 --------------------------------
 
-+-------+--------------+-------------+--------------+
-| Total | Clock Enable | Synchronous | Asynchronous |
-+-------+--------------+-------------+--------------+
-| 0     |            _ |           - |            - |
-| 0     |            _ |           - |          Set |
-| 0     |            _ |           - |        Reset |
-| 0     |            _ |         Set |            - |
-| 0     |            _ |       Reset |            - |
-| 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 72    |          Yes |       Reset |            - |
-+-------+--------------+-------------+--------------+
++--------+--------------+-------------+--------------+
+|  Total | Clock Enable | Synchronous | Asynchronous |
++--------+--------------+-------------+--------------+
+| 0      |            _ |           - |            - |
+| 0      |            _ |           - |          Set |
+| 0      |            _ |           - |        Reset |
+| 0      |            _ |         Set |            - |
+| 0      |            _ |       Reset |            - |
+| 0      |          Yes |           - |            - |
+| 0      |          Yes |           - |          Set |
+| 0      |          Yes |           - |        Reset |
+| 0      |          Yes |         Set |            - |
+| 131560 |          Yes |       Reset |            - |
++--------+--------------+-------------+--------------+
 
 
 2. BLOCKRAM
@@ -150,21 +150,23 @@ Table of Contents
 8. Primitives
 -------------
 
-+----------+------+---------------------+
-| Ref Name | Used | Functional Category |
-+----------+------+---------------------+
-| OBUF     |   96 |                 I/O |
-| LUT6     |   77 |                 CLB |
-| FDRE     |   72 |            Register |
-| LUT5     |   52 |                 CLB |
-| LUT4     |   50 |                 CLB |
-| LUT2     |   32 |                 CLB |
-| LUT3     |    4 |                 CLB |
-| LUT1     |    1 |                 CLB |
-| INBUF    |    1 |                 I/O |
-| IBUFCTRL |    1 |              Others |
-| BUFGCE   |    1 |               Clock |
-+----------+------+---------------------+
++----------+--------+---------------------+
+| Ref Name |  Used  | Functional Category |
++----------+--------+---------------------+
+| FDRE     | 131560 |            Register |
+| LUT6     |  38422 |                 CLB |
+| MUXF7    |  17483 |                 CLB |
+| MUXF8    |   8741 |                 CLB |
+| LUT3     |   1811 |                 CLB |
+| LUT5     |   1596 |                 CLB |
+| LUT4     |    566 |                 CLB |
+| LUT2     |    504 |                 CLB |
+| OBUF     |     96 |                 I/O |
+| LUT1     |      1 |                 CLB |
+| INBUF    |      1 |                 I/O |
+| IBUFCTRL |      1 |              Others |
+| BUFGCE   |      1 |               Clock |
++----------+--------+---------------------+
 
 
 9. Black Boxes

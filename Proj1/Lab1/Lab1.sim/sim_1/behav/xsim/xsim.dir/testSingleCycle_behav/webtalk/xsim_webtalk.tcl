@@ -1,6 +1,6 @@
-webtalk_init -webtalk_dir D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/testSingleCycle_behav/webtalk/
+webtalk_init -webtalk_dir D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/testSingleCycle_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Tue Mar 27 17:18:38 2018" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Tue Mar 27 19:45:59 2018" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2017.4 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2086221" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "f3e1792b-b342-4c65-b292-f54ef5e689c1" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "5b51dfda4d3c463bbe665987e04d6ca8" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "19" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "3" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz" -context "user_environment"
@@ -30,13 +30,13 @@ webtalk_add_data -client xsim -key SDFModeling -value "false" -context "xsim\\co
 webtalk_add_data -client xsim -key HWCosim -value "false" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key DPI_Used -value "false" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key Debug -value "typical" -context "xsim\\command_line_options"
-webtalk_add_data -client xsim -key Simulation_Image_Code -value "126 KB" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Image_Code -value "127 KB" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Simulation_Image_Data -value "25 KB" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Nets -value "0" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Total_Processes -value "414" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Total_Processes -value "416" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Instances -value "199" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip " -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Time -value "0.75_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "53512_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 2133321134 -regid "" -xml D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/testSingleCycle_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/testSingleCycle_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/testSingleCycle_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Time -value "0.81_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Compiler_Memory -value "53560_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 2727432729 -regid "" -xml D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/testSingleCycle_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/testSingleCycle_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.sim/sim_1/behav/xsim/xsim.dir/testSingleCycle_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
