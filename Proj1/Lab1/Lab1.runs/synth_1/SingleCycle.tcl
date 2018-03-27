@@ -21,6 +21,7 @@ create_project -in_memory -part xcku5p-ffvb676-2-e
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+<<<<<<< HEAD
 set_property webtalk.parent_dir D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.cache/wt [current_project]
 set_property parent.project_path D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
@@ -50,6 +51,37 @@ read_vhdl -library xil_defaultlib {
   D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Zero.vhd
   D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd
   D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd
+=======
+set_property webtalk.parent_dir D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.cache/wt [current_project]
+set_property parent.project_path D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.xpr [current_project]
+set_property default_lib xil_defaultlib [current_project]
+set_property target_language Verilog [current_project]
+set_property board_part xilinx.com:kcu116:part0:1.2 [current_project]
+set_property ip_output_repo d:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.cache/ip [current_project]
+set_property ip_cache_permissions {read write} [current_project]
+read_vhdl -library xil_defaultlib {
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Buf.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/DataMemory.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Decoder.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Execute.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FullAdder.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionDecode.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionFetch.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionMemory.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Memory.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/RegisterFile.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/RegisterN.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Shifter.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/WriteBack.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Zero.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd
+  D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd
+>>>>>>> 7e1232f8b0e460d4dc1da868d6ad3d2801011796
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

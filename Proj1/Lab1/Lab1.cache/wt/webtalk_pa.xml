@@ -3,7 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
+<<<<<<< HEAD
 <application name="pa" timeStamp="Tue Mar 27 19:37:02 2018">
+=======
+<application name="pa" timeStamp="Tue Mar 27 17:50:27 2018">
+>>>>>>> 7e1232f8b0e460d4dc1da868d6ad3d2801011796
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="c115e45bf6d94671a1d945098cabf16c" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -19,9 +23,15 @@ This means code written to parse this file will need to be revisited each subseq
 <item name="Java Command Handlers">
 <property name="AddSources" value="1" type="JavaHandler"/>
 <property name="FilePrintCmdHandler" value="1" type="JavaHandler"/>
+<<<<<<< HEAD
 <property name="OpenProject" value="4" type="JavaHandler"/>
 <property name="RunImplementation" value="4" type="JavaHandler"/>
 <property name="RunSynthesis" value="15" type="JavaHandler"/>
+=======
+<property name="OpenProject" value="3" type="JavaHandler"/>
+<property name="RunImplementation" value="4" type="JavaHandler"/>
+<property name="RunSynthesis" value="14" type="JavaHandler"/>
+>>>>>>> 7e1232f8b0e460d4dc1da868d6ad3d2801011796
 <property name="SaveFileProxyHandler" value="2" type="JavaHandler"/>
 <property name="SetTopNode" value="2" type="JavaHandler"/>
 <property name="ShowView" value="11" type="JavaHandler"/>
@@ -36,6 +46,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ui.views.c.h.e" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Handlers">
+<<<<<<< HEAD
 <property name="BaseDialog_OK" value="32" type="GuiHandlerData"/>
 <property name="BaseDialog_YES" value="3" type="GuiHandlerData"/>
 <property name="ConfirmSaveTextEditsDialog_CANCEL" value="1" type="GuiHandlerData"/>
@@ -44,6 +55,16 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="FindAndReplaceAllDialog_FIND" value="1" type="GuiHandlerData"/>
 <property name="FindInFilesView_REPLACE_ALL_OCCURRENCES_IN_ALL_FILES" value="2" type="GuiHandlerData"/>
 <property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="11" type="GuiHandlerData"/>
+=======
+<property name="BaseDialog_OK" value="31" type="GuiHandlerData"/>
+<property name="BaseDialog_YES" value="3" type="GuiHandlerData"/>
+<property name="ConfirmSaveTextEditsDialog_CANCEL" value="1" type="GuiHandlerData"/>
+<property name="ConfirmSaveTextEditsDialog_YES" value="1" type="GuiHandlerData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="190" type="GuiHandlerData"/>
+<property name="FindAndReplaceAllDialog_FIND" value="1" type="GuiHandlerData"/>
+<property name="FindInFilesView_REPLACE_ALL_OCCURRENCES_IN_ALL_FILES" value="2" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="5" type="GuiHandlerData"/>
+>>>>>>> 7e1232f8b0e460d4dc1da868d6ad3d2801011796
 <property name="GettingStartedView_OPEN_PROJECT" value="2" type="GuiHandlerData"/>
 <property name="GraphicalView_ZOOM_FIT" value="1" type="GuiHandlerData"/>
 <property name="GraphicalView_ZOOM_IN" value="1" type="GuiHandlerData"/>
@@ -87,17 +108,29 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PACommandNames_SIMULATION_LIVE_RUN_ALL" value="2" type="GuiHandlerData"/>
 <property name="PACommandNames_SIMULATION_RELAUNCH" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_SIMULATION_RUN" value="2" type="GuiHandlerData"/>
+<<<<<<< HEAD
 <property name="PACommandNames_SIMULATION_RUN_BEHAVIORAL" value="2" type="GuiHandlerData"/>
 <property name="PACommandNames_TOGGLE_VIEW_NAV" value="2" type="GuiHandlerData"/>
 <property name="PAViews_CODE" value="22" type="GuiHandlerData"/>
 <property name="PAViews_FLOW_NAVIGATOR" value="2" type="GuiHandlerData"/>
 <property name="PAViews_PROJECT_SUMMARY" value="2" type="GuiHandlerData"/>
 <property name="PlanAheadTab_SHOW_FLOW_NAVIGATOR" value="1" type="GuiHandlerData"/>
+=======
+<property name="PACommandNames_SIMULATION_RUN_BEHAVIORAL" value="1" type="GuiHandlerData"/>
+<property name="PACommandNames_TOGGLE_VIEW_NAV" value="1" type="GuiHandlerData"/>
+<property name="PAViews_CODE" value="22" type="GuiHandlerData"/>
+<property name="PAViews_FLOW_NAVIGATOR" value="2" type="GuiHandlerData"/>
+<property name="PAViews_PROJECT_SUMMARY" value="2" type="GuiHandlerData"/>
+>>>>>>> 7e1232f8b0e460d4dc1da868d6ad3d2801011796
 <property name="ProgressDialog_BACKGROUND" value="1" type="GuiHandlerData"/>
 <property name="ProgressDialog_CANCEL" value="2" type="GuiHandlerData"/>
 <property name="RDICommands_CUSTOM_COMMANDS" value="1" type="GuiHandlerData"/>
 <property name="RDICommands_REDO" value="21" type="GuiHandlerData"/>
+<<<<<<< HEAD
 <property name="RDIViews_WAVEFORM_VIEWER" value="39" type="GuiHandlerData"/>
+=======
+<property name="RDIViews_WAVEFORM_VIEWER" value="34" type="GuiHandlerData"/>
+>>>>>>> 7e1232f8b0e460d4dc1da868d6ad3d2801011796
 <property name="SaveProjectUtils_SAVE" value="4" type="GuiHandlerData"/>
 <property name="SimulationLiveRunForComp_SPECIFY_TIME_AND_UNITS" value="1" type="GuiHandlerData"/>
 <property name="SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE" value="4" type="GuiHandlerData"/>
@@ -108,9 +141,15 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="WaveformNameTree_WAVEFORM_NAME_TREE" value="4" type="GuiHandlerData"/>
 </item>
 <item name="Other">
+<<<<<<< HEAD
 <property name="GuiMode" value="18" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
 <property name="TclMode" value="13" type="TclMode"/>
+=======
+<property name="GuiMode" value="11" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="9" type="TclMode"/>
+>>>>>>> 7e1232f8b0e460d4dc1da868d6ad3d2801011796
 </item>
 </section>
 </application>
