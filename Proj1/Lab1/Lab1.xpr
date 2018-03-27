@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="D:/User/Desktop/aac/Lab1.xpr">
+<Project Version="7" Minor="35" Path="D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="5b51dfda4d3c463bbe665987e04d6ca8"/>
@@ -96,14 +96,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/design/EXMEM_Stage_Registers.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/EXMEM_Stage_Registers.vhd"/>
-          <Attr Name="ImportTime" Val="1490466702"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/design/Execute.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/Execute.vhd"/>
@@ -124,22 +116,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/FunctionalUnit.vhd"/>
           <Attr Name="ImportTime" Val="1489774484"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/design/IDEX_Stage_Registers.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/IDEX_Stage_Registers.vhd"/>
-          <Attr Name="ImportTime" Val="1490466242"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/design/IFID_Stage_Registers.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/IFID_Stage_Registers.vhd"/>
-          <Attr Name="ImportTime" Val="1489868598"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -180,14 +156,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/LogicUnitI.vhd"/>
           <Attr Name="ImportTime" Val="1489343658"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/design/MEMWB_Stage_Registers.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/MEMWB_Stage_Registers.vhd"/>
-          <Attr Name="ImportTime" Val="1490181042"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -248,19 +216,55 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/design/FiveStagePipeline.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/design/SingleCycle.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/FiveStagePipeline.vhd"/>
-          <Attr Name="ImportTime" Val="1490466644"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/SingleCycle.vhd"/>
+          <Attr Name="ImportTime" Val="1490316898"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/design/SingleCycle.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/design/EXMEM_Stage_Registers.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/SingleCycle.vhd"/>
-          <Attr Name="ImportTime" Val="1490316898"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/EXMEM_Stage_Registers.vhd"/>
+          <Attr Name="ImportTime" Val="1490466702"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/design/IDEX_Stage_Registers.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/IDEX_Stage_Registers.vhd"/>
+          <Attr Name="ImportTime" Val="1490466242"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/design/IFID_Stage_Registers.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/IFID_Stage_Registers.vhd"/>
+          <Attr Name="ImportTime" Val="1489868598"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/design/MEMWB_Stage_Registers.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/MEMWB_Stage_Registers.vhd"/>
+          <Attr Name="ImportTime" Val="1490181042"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/design/FiveStagePipeline.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sources_1/imports/design/FiveStagePipeline.vhd"/>
+          <Attr Name="ImportTime" Val="1490466644"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -268,8 +272,7 @@
       <File Path="$PPRDIR/archive_project_summary.txt"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="FiveStagePipeline"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="SingleCycle"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -280,8 +283,17 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_1/imports/sim/testSingleCycle.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sim_1/imports/sim/testSingleCycle.vhd"/>
+          <Attr Name="ImportTime" Val="1490280716"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sim_1/imports/sim/testFiveStagePipeline.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sim_1/imports/sim/testFiveStagePipeline.vhd"/>
           <Attr Name="ImportTime" Val="1490195230"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -304,20 +316,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/imports/sim/testSingleCycle.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sim_1/imports/sim/testSingleCycle.vhd"/>
-          <Attr Name="ImportTime" Val="1490280716"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="testFiveStagePipeline"/>
+        <Option Name="TopModule" Val="testSingleCycle"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
@@ -343,11 +345,12 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xcku5p-ffvb676-2-e" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xcku5p-ffvb676-2-e" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>

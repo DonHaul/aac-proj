@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity SingleCycle is
   Port (
         CLK  : in std_logic;
-        PC   : out std_logic_vector(31 downto 0); 
+        PC   : out std_logic_vector(31 downto 0);
         I    : out std_logic_vector(31 downto 0);
         Data : out std_logic_vector(31 downto 0)
         );
@@ -13,7 +13,7 @@ end SingleCycle;
 architecture Structural of SingleCycle is
 
 component InstructionFetch
-    Port ( 
+    Port (
            CLK          : in std_logic;
            StageEnable  : in std_logic;
            PCLoadEnable : in std_logic;
@@ -34,7 +34,7 @@ component InstructionDecode
            -- execution control (EX => Execute)
            FS       : out STD_LOGIC_VECTOR ( 3 downto 0);
 --           FW       : out STD_LOGIC_VECTOR ( 3 downto 0);
-           PL       : out STD_LOGIC;
+           PL       : out STD_LOGIC_VECTOR ( 1 downto 0);
            BC       : out STD_LOGIC_VECTOR ( 3 downto 0);
            -- memory control (MEM => Memory)
            MMA      : out STD_LOGIC_VECTOR ( 1 downto 0);
@@ -48,19 +48,19 @@ end component;
 
 component Execute
   Port (
-    A      : in std_logic_vector(31 downto 0); 
+    A      : in std_logic_vector(31 downto 0);
     B      : in std_logic_vector(31 downto 0);
     MA     : in std_logic;
     MB     : in std_logic;
-    KNS    : in std_logic_vector(31 downto 0); 
+    KNS    : in std_logic_vector(31 downto 0);
     FS     : in std_logic_vector( 3 downto 0);
 --    FW     : in std_logic_vector( 3 downto 0);
-    PL     : in std_logic;
+    PL     : in STD_LOGIC_VECTOR ( 1 downto 0);
     BC     : in std_logic_vector( 3 downto 0);
     PC     : in std_logic_vector(31 downto 0);
     PCLoadValue : out std_logic_vector(31 downto 0);
     PCLoadEnable : out std_logic;
-    DataD  : out std_logic_vector(31 downto 0) 
+    DataD  : out std_logic_vector(31 downto 0)
   );
 end component;
 
@@ -68,7 +68,7 @@ component Memory is
   Port (
     CLK   : in std_logic;
     StageEnable: in std_logic;
-    A     : in std_logic_vector(31 downto 0); 
+    A     : in std_logic_vector(31 downto 0);
     B     : in std_logic_vector(31 downto 0);
     KNS   : in std_logic_vector(31 downto 0);
     Din   : in std_logic_vector(31 downto 0);
@@ -110,7 +110,8 @@ signal EnableIF, EnableID, EnableEX, EnableMEM, EnableWB : std_logic;
 signal Instruction : std_logic_vector(31 downto 0);
 signal PCValue, PCLoadValue : std_logic_vector(31 downto 0);
 signal BC : std_logic_vector(3 downto 0);
-signal PL, PCLoadEnable : std_logic;
+signal PCLoadEnable : std_logic;
+signal PL : std_logic_vector(1 downto 0);
 
 -- RF addressing and operand selection signals
 signal AA, BA, DA : std_logic_vector(3 downto 0);
@@ -163,7 +164,7 @@ WB: WriteBack port map(enable=>'1', DA=>DA, MD=>MD, ALUData=>ALUData, MemData=>M
 --------------------------------------------------------------------------------------------------------------------------
 -- Register File
 --------------------------------------------------------------------------------------------------------------------------
-RF: RegisterFile generic map(n_bits=>32) port map(CLK=>CLK, Data=>RFData, DA=>DA, AA=>AA, BA=>BA, A=>A, B=>B); 
+RF: RegisterFile generic map(n_bits=>32) port map(CLK=>CLK, Data=>RFData, DA=>DA, AA=>AA, BA=>BA, A=>A, B=>B);
 
 --------------------------------------------------------------------------------------------------------------------------
 -- Output
