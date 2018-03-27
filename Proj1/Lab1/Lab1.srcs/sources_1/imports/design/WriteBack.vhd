@@ -22,7 +22,7 @@ signal SelMD : std_logic_vector(1 downto 0);
 
 begin
 
--- Added link support here
+-- Added link support her
 DA_reg <= "0000" when Enable='0'
           else "1111" when LinkEn='1'
           else DA;

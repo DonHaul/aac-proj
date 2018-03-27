@@ -2,12 +2,12 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Mar 27 15:28:31 2018
-# Process ID: 75164
-# Current directory: D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.runs/synth_1
+# Start of session at: Tue Mar 27 17:50:30 2018
+# Process ID: 4068
+# Current directory: D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.runs/synth_1
 # Command line: vivado.exe -log SingleCycle.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SingleCycle.tcl
-# Log file: D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.runs/synth_1/SingleCycle.vds
-# Journal file: D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.runs/synth_1\vivado.jou
+# Log file: D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.runs/synth_1/SingleCycle.vds
+# Journal file: D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source SingleCycle.tcl -notrace
 Command: synth_design -top SingleCycle -part xcku5p-ffvb676-2-e
@@ -15,176 +15,173 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku5p'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku5p'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 69992 
+INFO: Helper process launched with PID 12864 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 388.902 ; gain = 97.754
+Starting Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 345.230 ; gain = 100.570
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'SingleCycle' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd:13]
-INFO: [Synth 8-3491] module 'InstructionFetch' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionFetch.vhd:5' bound to instance 'IFetch' of component 'InstructionFetch' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd:141]
-INFO: [Synth 8-638] synthesizing module 'InstructionFetch' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionFetch.vhd:16]
-INFO: [Synth 8-3491] module 'InstructionMemory' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionMemory.vhd:5' bound to instance 'InstMem' of component 'InstructionMemory' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionFetch.vhd:44]
-INFO: [Synth 8-638] synthesizing module 'InstructionMemory' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionMemory.vhd:10]
-INFO: [Synth 8-256] done synthesizing module 'InstructionMemory' (1#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionMemory.vhd:10]
-INFO: [Synth 8-256] done synthesizing module 'InstructionFetch' (2#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionFetch.vhd:16]
-INFO: [Synth 8-3491] module 'InstructionDecode' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionDecode.vhd:5' bound to instance 'ID' of component 'InstructionDecode' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd:147]
-INFO: [Synth 8-638] synthesizing module 'InstructionDecode' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionDecode.vhd:28]
-INFO: [Synth 8-256] done synthesizing module 'InstructionDecode' (3#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionDecode.vhd:28]
-INFO: [Synth 8-3491] module 'Execute' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Execute.vhd:4' bound to instance 'EX' of component 'Execute' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd:152]
-INFO: [Synth 8-638] synthesizing module 'Execute' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Execute.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'SingleCycle' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd:13]
+INFO: [Synth 8-3491] module 'InstructionFetch' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionFetch.vhd:5' bound to instance 'IFetch' of component 'InstructionFetch' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd:149]
+INFO: [Synth 8-638] synthesizing module 'InstructionFetch' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionFetch.vhd:17]
+INFO: [Synth 8-3491] module 'InstructionMemory' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionMemory.vhd:5' bound to instance 'InstMem' of component 'InstructionMemory' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionFetch.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'InstructionMemory' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionMemory.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'InstructionMemory' (1#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionMemory.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'InstructionFetch' (2#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionFetch.vhd:17]
+INFO: [Synth 8-3491] module 'InstructionDecode' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionDecode.vhd:5' bound to instance 'ID' of component 'InstructionDecode' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'InstructionDecode' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionDecode.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'InstructionDecode' (3#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionDecode.vhd:28]
+INFO: [Synth 8-3491] module 'Execute' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Execute.vhd:4' bound to instance 'EX' of component 'Execute' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'Execute' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Execute.vhd:23]
 	Parameter n_bits bound to: 32 - type: integer 
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'FunctionalUnit' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:4' bound to instance 'ALU' of component 'FunctionalUnit' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Execute.vhd:62]
-INFO: [Synth 8-638] synthesizing module 'FunctionalUnit' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:13]
+INFO: [Synth 8-3491] module 'FunctionalUnit' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:4' bound to instance 'ALU' of component 'FunctionalUnit' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Execute.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'FunctionalUnit' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:13]
 	Parameter n_bits bound to: 32 - type: integer 
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'ArithmeticUnit' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:4' bound to instance 'AU1' of component 'ArithmeticUnit' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:59]
-INFO: [Synth 8-638] synthesizing module 'ArithmeticUnit' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:14]
+INFO: [Synth 8-3491] module 'ArithmeticUnit' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:4' bound to instance 'AU1' of component 'ArithmeticUnit' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'ArithmeticUnit' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:14]
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-638] synthesizing module 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:13]
-INFO: [Synth 8-3491] module 'FullAdder' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FullAdder.vhd:4' bound to instance 'FA' of component 'FullAdder' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:24]
-INFO: [Synth 8-638] synthesizing module 'FullAdder' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FullAdder.vhd:12]
-INFO: [Synth 8-256] done synthesizing module 'FullAdder' (4#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FullAdder.vhd:12]
-INFO: [Synth 8-256] done synthesizing module 'ArithmeticUnitI' (5#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:13]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
-INFO: [Synth 8-256] done synthesizing module 'ArithmeticUnit' (6#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:14]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:13]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FullAdder.vhd:4' bound to instance 'FA' of component 'FullAdder' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'FullAdder' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FullAdder.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'FullAdder' (4#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FullAdder.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'ArithmeticUnitI' (5#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:13]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'ArithmeticUnit' (6#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd:14]
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'LogicUnit' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:4' bound to instance 'LU1' of component 'LogicUnit' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:60]
-INFO: [Synth 8-638] synthesizing module 'LogicUnit' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:12]
+INFO: [Synth 8-3491] module 'LogicUnit' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:4' bound to instance 'LU1' of component 'LogicUnit' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'LogicUnit' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:12]
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-638] synthesizing module 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:11]
-INFO: [Synth 8-226] default block is never used [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'LogicUnitI' (7#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:11]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
-INFO: [Synth 8-256] done synthesizing module 'LogicUnit' (8#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:12]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:11]
+INFO: [Synth 8-226] default block is never used [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'LogicUnitI' (7#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:11]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-3491] module 'LogicUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd:4' bound to instance 'LUi' of component 'LogicUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'LogicUnit' (8#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/LogicUnit.vhd:12]
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'Shifter' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Shifter.vhd:4' bound to instance 'SH1' of component 'Shifter' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:61]
-INFO: [Synth 8-638] synthesizing module 'Shifter' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Shifter.vhd:13]
+INFO: [Synth 8-3491] module 'Shifter' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Shifter.vhd:4' bound to instance 'SH1' of component 'Shifter' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'Shifter' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Shifter.vhd:13]
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-226] default block is never used [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Shifter.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'Shifter' (9#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Shifter.vhd:13]
-INFO: [Synth 8-226] default block is never used [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:64]
+INFO: [Synth 8-226] default block is never used [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Shifter.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'Shifter' (9#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Shifter.vhd:13]
+INFO: [Synth 8-226] default block is never used [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:64]
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'Zero' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Zero.vhd:4' bound to instance 'Zero1' of component 'Zero' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:70]
-INFO: [Synth 8-638] synthesizing module 'Zero' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Zero.vhd:10]
+INFO: [Synth 8-3491] module 'Zero' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Zero.vhd:4' bound to instance 'Zero1' of component 'Zero' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'Zero' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Zero.vhd:10]
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'Zero' (10#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Zero.vhd:10]
-INFO: [Synth 8-3491] module 'Buf' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Buf.vhd:4' bound to instance 'Buf1' of component 'Buf' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:73]
-INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_Buf' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Buf.vhd:9]
-INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_Buf' (11#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Buf.vhd:9]
-INFO: [Synth 8-226] default block is never used [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:77]
-INFO: [Synth 8-226] default block is never used [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:84]
-INFO: [Synth 8-256] done synthesizing module 'FunctionalUnit' (12#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:13]
-WARNING: [Synth 8-5640] Port 'linken' is missing in component declaration [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Execute.vhd:33]
-INFO: [Synth 8-3491] module 'branchcontrol' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:5' bound to instance 'UCS' of component 'branchcontrol' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Execute.vhd:65]
-INFO: [Synth 8-638] synthesizing module 'branchcontrol' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'Zero' (10#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Zero.vhd:10]
+INFO: [Synth 8-3491] module 'Buf' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Buf.vhd:4' bound to instance 'Buf1' of component 'Buf' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_Buf' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Buf.vhd:9]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_Buf' (11#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Buf.vhd:9]
+INFO: [Synth 8-226] default block is never used [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:77]
+INFO: [Synth 8-226] default block is never used [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:84]
+INFO: [Synth 8-256] done synthesizing module 'FunctionalUnit' (12#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd:13]
+INFO: [Synth 8-3491] module 'branchcontrol' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:5' bound to instance 'UCS' of component 'branchcontrol' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Execute.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'branchcontrol' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:18]
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
-INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
+INFO: [Synth 8-3491] module 'ArithmeticUnitI' declared at 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd:4' bound to instance 'AUi' of component 'ArithmeticUnitI' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:43]
 INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-256] done synthesizing module 'branchcontrol' (13#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'Execute' (14#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Execute.vhd:22]
-INFO: [Synth 8-638] synthesizing module 'Memory' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Memory.vhd:19]
-INFO: [Synth 8-638] synthesizing module 'DataMemory' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/DataMemory.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'branchcontrol' (13#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/branchcontrol.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'Execute' (14#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Execute.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'Memory' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Memory.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'DataMemory' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/DataMemory.vhd:16]
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'DataMemory' (15#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/DataMemory.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'Memory' (16#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Memory.vhd:19]
-WARNING: [Synth 8-5640] Port 'wr' is missing in component declaration [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd:82]
-INFO: [Synth 8-638] synthesizing module 'WriteBack' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/WriteBack.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'WriteBack' (17#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/WriteBack.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'DataMemory' (15#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/DataMemory.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'Memory' (16#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Memory.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'WriteBack' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/WriteBack.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'WriteBack' (17#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/WriteBack.vhd:19]
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'RegisterFile' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/RegisterFile.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'RegisterFile' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/RegisterFile.vhd:18]
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'Decoder' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Decoder.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'Decoder' (18#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Decoder.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'Decoder' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Decoder.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Decoder' (18#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/Decoder.vhd:24]
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'RegisterN' [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/RegisterN.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'RegisterN' [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/RegisterN.vhd:15]
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'RegisterN' (19#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/RegisterN.vhd:15]
-	Parameter n_bits bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterN' (19#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/RegisterN.vhd:15]
 	Parameter n_bits bound to: 32 - type: integer 
 	Parameter n_bits bound to: 32 - type: integer 
 	Parameter n_bits bound to: 32 - type: integer 
@@ -198,8 +195,10 @@ INFO: [Synth 8-256] done synthesizing module 'RegisterN' (19#1) [D:/User/Desktop
 	Parameter n_bits bound to: 32 - type: integer 
 	Parameter n_bits bound to: 32 - type: integer 
 	Parameter n_bits bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'RegisterFile' (20#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/RegisterFile.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'SingleCycle' (21#1) [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd:13]
+	Parameter n_bits bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterFile' (20#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/RegisterFile.vhd:18]
+WARNING: [Synth 8-3848] Net LinkEn in module/entity SingleCycle does not have driver. [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd:136]
+INFO: [Synth 8-256] done synthesizing module 'SingleCycle' (21#1) [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/SingleCycle.vhd:13]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[31]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[30]
 WARNING: [Synth 8-3331] design DataMemory has unconnected port Address[29]
@@ -248,17 +247,17 @@ WARNING: [Synth 8-3331] design InstructionFetch has unconnected port PCLoadValue
 WARNING: [Synth 8-3331] design InstructionFetch has unconnected port PCLoadValue[9]
 WARNING: [Synth 8-3331] design InstructionFetch has unconnected port PCLoadValue[8]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 741.961 ; gain = 450.813
+Finished Synthesize : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 697.141 ; gain = 452.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 741.961 ; gain = 450.813
+Finished Constraint Validation : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 697.141 ; gain = 452.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku5p-ffvb676-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 741.961 ; gain = 450.813
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 697.141 ; gain = 452.480
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xcku5p-ffvb676-2-e
 INFO: [Synth 8-5546] ROM "storage" won't be mapped to RAM because it is too sparse
@@ -364,7 +363,7 @@ INFO: [Synth 8-5546] ROM "storage_reg[96]" won't be mapped to RAM because it is 
 INFO: [Synth 8-5546] ROM "storage_reg[97]" won't be mapped to RAM because it is too sparse
 INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:55 ; elapsed = 00:01:50 . Memory (MB): peak = 1610.191 ; gain = 1319.043
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:32 ; elapsed = 00:03:22 . Memory (MB): peak = 1563.594 ; gain = 1318.934
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -381,7 +380,7 @@ Report RTL Partitions:
 |8     |DataMemory__GB7  |           1|     22823|
 |9     |DataMemory__GB8  |           1|     33307|
 |10    |Memory__GC0      |           1|       527|
-|11    |SingleCycle__GC0 |           1|      3298|
+|11    |SingleCycle__GC0 |           1|      3535|
 +------+-----------------+------------+----------+
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -400,9 +399,9 @@ Detailed RTL Component Info :
 	 257 Input     32 Bit        Muxes := 1     
 	  65 Input     32 Bit        Muxes := 1     
 	   3 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 5     
+	   2 Input     32 Bit        Muxes := 6     
 	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
 	   2 Input      1 Bit        Muxes := 4098  
 	   3 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
@@ -851,7 +850,8 @@ Detailed RTL Component Info :
 Module WriteBack 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
 Module RegisterN__1 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -929,145 +929,12 @@ No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element PC_reg was removed.  [D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionFetch.vhd:44]
+WARNING: [Synth 8-6014] Unused sequential element PC_reg was removed.  [D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.srcs/sources_1/imports/design/InstructionFetch.vhd:45]
 INFO: [Synth 8-5545] ROM "ALU/Zero1/D" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[29]' (FDE) to 'i_9/RF/R13/Q_reg[29]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[29]' (FDE) to 'i_9/RF/R13/Q_reg[29]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[29]' (FDE) to 'i_9/RF/R11/Q_reg[29]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[29]' (FDE) to 'i_9/RF/R11/Q_reg[29]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[29]' (FDE) to 'i_9/RF/R9/Q_reg[29]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[29]' (FDE) to 'i_9/RF/R9/Q_reg[29]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[29]' (FDE) to 'i_9/RF/R8/Q_reg[29]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[29] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[28]' (FDE) to 'i_9/RF/R13/Q_reg[28]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[28]' (FDE) to 'i_9/RF/R13/Q_reg[28]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[28]' (FDE) to 'i_9/RF/R11/Q_reg[28]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[28]' (FDE) to 'i_9/RF/R11/Q_reg[28]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[28]' (FDE) to 'i_9/RF/R9/Q_reg[28]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[28]' (FDE) to 'i_9/RF/R9/Q_reg[28]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[28]' (FDE) to 'i_9/RF/R8/Q_reg[28]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[28] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[27]' (FDE) to 'i_9/RF/R13/Q_reg[27]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[27]' (FDE) to 'i_9/RF/R13/Q_reg[27]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[27]' (FDE) to 'i_9/RF/R11/Q_reg[27]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[27]' (FDE) to 'i_9/RF/R11/Q_reg[27]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[27]' (FDE) to 'i_9/RF/R9/Q_reg[27]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[27]' (FDE) to 'i_9/RF/R9/Q_reg[27]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[27]' (FDE) to 'i_9/RF/R8/Q_reg[27]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[27] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[26]' (FDE) to 'i_9/RF/R13/Q_reg[26]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[26]' (FDE) to 'i_9/RF/R13/Q_reg[26]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[26]' (FDE) to 'i_9/RF/R11/Q_reg[26]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[26]' (FDE) to 'i_9/RF/R11/Q_reg[26]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[26]' (FDE) to 'i_9/RF/R9/Q_reg[26]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[26]' (FDE) to 'i_9/RF/R9/Q_reg[26]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[26]' (FDE) to 'i_9/RF/R8/Q_reg[26]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[26] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[25]' (FDE) to 'i_9/RF/R13/Q_reg[25]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[25]' (FDE) to 'i_9/RF/R13/Q_reg[25]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[25]' (FDE) to 'i_9/RF/R11/Q_reg[25]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[25]' (FDE) to 'i_9/RF/R11/Q_reg[25]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[25]' (FDE) to 'i_9/RF/R9/Q_reg[25]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[25]' (FDE) to 'i_9/RF/R9/Q_reg[25]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[25]' (FDE) to 'i_9/RF/R8/Q_reg[25]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[25] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[24]' (FDE) to 'i_9/RF/R13/Q_reg[24]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[24]' (FDE) to 'i_9/RF/R13/Q_reg[24]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[24]' (FDE) to 'i_9/RF/R11/Q_reg[24]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[24]' (FDE) to 'i_9/RF/R11/Q_reg[24]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[24]' (FDE) to 'i_9/RF/R9/Q_reg[24]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[24]' (FDE) to 'i_9/RF/R9/Q_reg[24]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[24]' (FDE) to 'i_9/RF/R8/Q_reg[24]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[24] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[23]' (FDE) to 'i_9/RF/R13/Q_reg[23]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[23]' (FDE) to 'i_9/RF/R13/Q_reg[23]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[23]' (FDE) to 'i_9/RF/R11/Q_reg[23]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[23]' (FDE) to 'i_9/RF/R11/Q_reg[23]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[23]' (FDE) to 'i_9/RF/R9/Q_reg[23]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[23]' (FDE) to 'i_9/RF/R9/Q_reg[23]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[23]' (FDE) to 'i_9/RF/R8/Q_reg[23]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[23] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[22]' (FDE) to 'i_9/RF/R13/Q_reg[22]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[22]' (FDE) to 'i_9/RF/R13/Q_reg[22]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[22]' (FDE) to 'i_9/RF/R11/Q_reg[22]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[22]' (FDE) to 'i_9/RF/R11/Q_reg[22]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[22]' (FDE) to 'i_9/RF/R9/Q_reg[22]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[22]' (FDE) to 'i_9/RF/R9/Q_reg[22]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[22]' (FDE) to 'i_9/RF/R8/Q_reg[22]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[22] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[21]' (FDE) to 'i_9/RF/R13/Q_reg[21]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[21]' (FDE) to 'i_9/RF/R13/Q_reg[21]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[21]' (FDE) to 'i_9/RF/R11/Q_reg[21]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[21]' (FDE) to 'i_9/RF/R11/Q_reg[21]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[21]' (FDE) to 'i_9/RF/R9/Q_reg[21]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[21]' (FDE) to 'i_9/RF/R9/Q_reg[21]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[21]' (FDE) to 'i_9/RF/R8/Q_reg[21]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[21] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[20]' (FDE) to 'i_9/RF/R13/Q_reg[20]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[20]' (FDE) to 'i_9/RF/R13/Q_reg[20]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[20]' (FDE) to 'i_9/RF/R11/Q_reg[20]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[20]' (FDE) to 'i_9/RF/R11/Q_reg[20]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[20]' (FDE) to 'i_9/RF/R9/Q_reg[20]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[20]' (FDE) to 'i_9/RF/R9/Q_reg[20]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[20]' (FDE) to 'i_9/RF/R8/Q_reg[20]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[20] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[19]' (FDE) to 'i_9/RF/R13/Q_reg[19]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[19]' (FDE) to 'i_9/RF/R13/Q_reg[19]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[19]' (FDE) to 'i_9/RF/R11/Q_reg[19]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[19]' (FDE) to 'i_9/RF/R11/Q_reg[19]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[19]' (FDE) to 'i_9/RF/R9/Q_reg[19]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[19]' (FDE) to 'i_9/RF/R9/Q_reg[19]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[19]' (FDE) to 'i_9/RF/R8/Q_reg[19]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[19] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[18]' (FDE) to 'i_9/RF/R13/Q_reg[18]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[18]' (FDE) to 'i_9/RF/R13/Q_reg[18]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[18]' (FDE) to 'i_9/RF/R11/Q_reg[18]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[18]' (FDE) to 'i_9/RF/R11/Q_reg[18]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[18]' (FDE) to 'i_9/RF/R9/Q_reg[18]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[18]' (FDE) to 'i_9/RF/R9/Q_reg[18]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[18]' (FDE) to 'i_9/RF/R8/Q_reg[18]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[18] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[17]' (FDE) to 'i_9/RF/R13/Q_reg[17]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[17]' (FDE) to 'i_9/RF/R13/Q_reg[17]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[17]' (FDE) to 'i_9/RF/R11/Q_reg[17]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[17]' (FDE) to 'i_9/RF/R11/Q_reg[17]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[17]' (FDE) to 'i_9/RF/R9/Q_reg[17]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[17]' (FDE) to 'i_9/RF/R9/Q_reg[17]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[17]' (FDE) to 'i_9/RF/R8/Q_reg[17]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[17] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[16]' (FDE) to 'i_9/RF/R13/Q_reg[16]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[16]' (FDE) to 'i_9/RF/R13/Q_reg[16]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R13/Q_reg[16]' (FDE) to 'i_9/RF/R11/Q_reg[16]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R12/Q_reg[16]' (FDE) to 'i_9/RF/R11/Q_reg[16]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R11/Q_reg[16]' (FDE) to 'i_9/RF/R9/Q_reg[16]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R10/Q_reg[16]' (FDE) to 'i_9/RF/R9/Q_reg[16]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R9/Q_reg[16]' (FDE) to 'i_9/RF/R8/Q_reg[16]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[16] )
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R15/Q_reg[15]' (FDE) to 'i_9/RF/R13/Q_reg[15]'
-INFO: [Synth 8-3886] merging instance 'i_9/RF/R14/Q_reg[15]' (FDE) to 'i_9/RF/R13/Q_reg[15]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\RF/R8/Q_reg[30] )
 INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:12 ; elapsed = 00:03:52 . Memory (MB): peak = 1757.688 ; gain = 1466.539
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:17 ; elapsed = 00:07:51 . Memory (MB): peak = 1789.230 ; gain = 1544.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1083,67 +950,53 @@ Report RTL Partitions:
 |7     |DataMemory__GB6  |           1|     11906|
 |8     |DataMemory__GB7  |           1|     13970|
 |9     |DataMemory__GB8  |           1|      5367|
-|10    |Memory__GC0      |           1|       354|
-|11    |SingleCycle__GC0 |           1|       737|
+|10    |Memory__GC0      |           1|       138|
+|11    |SingleCycle__GC0 |           1|      3454|
 +------+-----------------+------------+----------+
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:14 ; elapsed = 00:03:54 . Memory (MB): peak = 1757.688 ; gain = 1466.539
+Finished Timing Optimization : Time (s): cpu = 00:06:20 ; elapsed = 00:07:53 . Memory (MB): peak = 1789.230 ; gain = 1544.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+-----------------+------------+----------+
 |      |RTL Partition    |Replication |Instances |
 +------+-----------------+------------+----------+
-|1     |SingleCycle__GC0 |           1|       672|
+|1     |muxpart__5       |           1|    131040|
+|2     |DataMemory__GB1  |           1|     18688|
+|3     |DataMemory__GB2  |           1|     18146|
+|4     |DataMemory__GB3  |           1|     16365|
+|5     |DataMemory__GB4  |           1|     28704|
+|6     |DataMemory__GB5  |           1|     28672|
+|7     |DataMemory__GB6  |           1|     11906|
+|8     |DataMemory__GB7  |           1|     13970|
+|9     |DataMemory__GB8  |           1|      5367|
+|10    |Memory__GC0      |           1|       138|
+|11    |SingleCycle__GC0 |           1|      3454|
 +------+-----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[31]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[30]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[29]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[28]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[27]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[26]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[25]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[24]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[23]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[22]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[21]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[20]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[19]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[18]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[17]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[16]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[15]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[14]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[13]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[12]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[11]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[10]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[9]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[8]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[7]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[6]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[5]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[4]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[3]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[2]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[1]) is unused and will be removed from module SingleCycle.
-WARNING: [Synth 8-3332] Sequential element (RF/R5/Q_reg[0]) is unused and will be removed from module SingleCycle.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:15 ; elapsed = 00:03:55 . Memory (MB): peak = 1757.688 ; gain = 1466.539
+Finished Technology Mapping : Time (s): cpu = 00:07:55 ; elapsed = 00:09:33 . Memory (MB): peak = 1803.750 ; gain = 1559.090
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+----------------+------------+----------+
+|      |RTL Partition   |Replication |Instances |
++------+----------------+------------+----------+
+|1     |muxpart__5      |           1|     61152|
+|2     |DataMemory__GB1 |           1|     18688|
+|3     |DataMemory__GB2 |           1|     18035|
+|4     |DataMemory__GB3 |           1|     16243|
+|5     |DataMemory__GB4 |           1|     28704|
+|6     |DataMemory__GB5 |           1|     28672|
+|7     |DataMemory__GB6 |           1|      9903|
+|8     |DataMemory__GB7 |           1|     13501|
++------+----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -1160,7 +1013,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:16 ; elapsed = 00:03:56 . Memory (MB): peak = 1757.688 ; gain = 1466.539
+Finished IO Insertion : Time (s): cpu = 00:09:07 ; elapsed = 00:10:47 . Memory (MB): peak = 1856.480 ; gain = 1611.820
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1173,7 +1026,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:16 ; elapsed = 00:03:56 . Memory (MB): peak = 1757.688 ; gain = 1466.539
+Finished Renaming Generated Instances : Time (s): cpu = 00:09:09 ; elapsed = 00:10:49 . Memory (MB): peak = 1856.480 ; gain = 1611.820
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1185,25 +1038,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:16 ; elapsed = 00:03:56 . Memory (MB): peak = 1757.688 ; gain = 1466.539
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:09:20 ; elapsed = 00:11:00 . Memory (MB): peak = 1856.480 ; gain = 1611.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:16 ; elapsed = 00:03:56 . Memory (MB): peak = 1757.688 ; gain = 1466.539
+Finished Renaming Generated Ports : Time (s): cpu = 00:09:29 ; elapsed = 00:11:09 . Memory (MB): peak = 1856.480 ; gain = 1611.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:16 ; elapsed = 00:03:56 . Memory (MB): peak = 1757.688 ; gain = 1466.539
+Finished Handling Custom Attributes : Time (s): cpu = 00:09:33 ; elapsed = 00:11:14 . Memory (MB): peak = 1856.480 ; gain = 1611.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:16 ; elapsed = 00:03:56 . Memory (MB): peak = 1757.688 ; gain = 1466.539
+Finished Renaming Generated Nets : Time (s): cpu = 00:09:34 ; elapsed = 00:11:15 . Memory (MB): peak = 1856.480 ; gain = 1611.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1216,40 +1069,58 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |BUFG |     1|
-|2     |LUT1 |     1|
-|3     |LUT2 |    32|
-|4     |LUT3 |     4|
-|5     |LUT4 |    50|
-|6     |LUT5 |    52|
-|7     |LUT6 |    77|
-|8     |FDRE |    72|
-|9     |IBUF |     1|
-|10    |OBUF |    96|
-+------+-----+------+
++------+------+-------+
+|      |Cell  |Count  |
++------+------+-------+
+|1     |BUFG  |      1|
+|2     |LUT1  |      1|
+|3     |LUT2  |    504|
+|4     |LUT3  |   1811|
+|5     |LUT4  |    566|
+|6     |LUT5  |   1596|
+|7     |LUT6  |  38422|
+|8     |MUXF7 |  17483|
+|9     |MUXF8 |   8741|
+|10    |FDRE  | 131560|
+|11    |IBUF  |      1|
+|12    |OBUF  |     96|
++------+------+-------+
 
 Report Instance Areas: 
-+------+---------+-----------------+------+
-|      |Instance |Module           |Cells |
-+------+---------+-----------------+------+
-|1     |top      |                 |   386|
-|2     |  IFetch |InstructionFetch |   204|
-|3     |  RF     |RegisterFile     |    84|
-|4     |    R2   |RegisterN        |    52|
-|5     |    R7   |RegisterN_0      |    32|
-+------+---------+-----------------+------+
++------+-------------+-----------------+-------+
+|      |Instance     |Module           |Cells  |
++------+-------------+-----------------+-------+
+|1     |top          |                 | 200782|
+|2     |  IFetch     |InstructionFetch |   7679|
+|3     |  MEM        |Memory           | 192224|
+|4     |    uDataMem |DataMemory       | 192224|
+|5     |  RF         |RegisterFile     |    781|
+|6     |    R1       |RegisterN        |     32|
+|7     |    R10      |RegisterN_0      |     32|
+|8     |    R11      |RegisterN_1      |     43|
+|9     |    R12      |RegisterN_2      |     32|
+|10    |    R13      |RegisterN_3      |     83|
+|11    |    R14      |RegisterN_4      |     32|
+|12    |    R15      |RegisterN_5      |     73|
+|13    |    R2       |RegisterN_6      |     32|
+|14    |    R3       |RegisterN_7      |     76|
+|15    |    R4       |RegisterN_8      |     32|
+|16    |    R5       |RegisterN_9      |     99|
+|17    |    R6       |RegisterN_10     |     32|
+|18    |    R7       |RegisterN_11     |     60|
+|19    |    R8       |RegisterN_12     |     32|
+|20    |    R9       |RegisterN_13     |     91|
++------+-------------+-----------------+-------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:16 ; elapsed = 00:03:56 . Memory (MB): peak = 1757.688 ; gain = 1466.539
+Finished Writing Synthesis Report : Time (s): cpu = 00:09:34 ; elapsed = 00:11:15 . Memory (MB): peak = 1856.480 ; gain = 1611.820
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 82 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:16 ; elapsed = 00:03:57 . Memory (MB): peak = 1757.688 ; gain = 1466.539
-Synthesis Optimization Complete : Time (s): cpu = 00:03:16 ; elapsed = 00:03:57 . Memory (MB): peak = 1757.688 ; gain = 1466.539
+Synthesis finished with 0 errors, 0 critical warnings and 49 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:09:34 ; elapsed = 00:11:23 . Memory (MB): peak = 1856.480 ; gain = 1611.820
+Synthesis Optimization Complete : Time (s): cpu = 00:09:34 ; elapsed = 00:11:23 . Memory (MB): peak = 1856.480 ; gain = 1611.820
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 26226 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'SingleCycle' is not ideal for floorplanning, since the cellview 'DataMemory' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -1258,10 +1129,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IBUF => IBUF (IBUFCTRL, INBUF): 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-396 Infos, 82 Warnings, 0 Critical Warnings and 0 Errors encountered.
+263 Infos, 50 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:24 ; elapsed = 00:04:06 . Memory (MB): peak = 1757.688 ; gain = 1479.414
-INFO: [Common 17-1381] The checkpoint 'D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.runs/synth_1/SingleCycle.dcp' has been generated.
+synth_design: Time (s): cpu = 00:10:40 ; elapsed = 00:12:38 . Memory (MB): peak = 1897.059 ; gain = 1665.348
+INFO: [Common 17-1381] The checkpoint 'D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.runs/synth_1/SingleCycle.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:39 ; elapsed = 00:00:29 . Memory (MB): peak = 1915.582 ; gain = 18.523
 INFO: [runtcl-4] Executing : report_utilization -file SingleCycle_utilization_synth.rpt -pb SingleCycle_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.127 . Memory (MB): peak = 1757.688 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 27 15:32:43 2018...
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1915.582 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 27 18:03:47 2018...

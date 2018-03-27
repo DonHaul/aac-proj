@@ -89,7 +89,8 @@ component WriteBack
         ALUData  : in STD_LOGIC_VECTOR(31 downto 0);
         MemData  : in STD_LOGIC_VECTOR(31 downto 0);
 --        WR       : out STD_LOGIC;
-        LinkEn: out STD_LOGIC;
+        LinkEn   : in STD_LOGIC;
+        PCAddOne : in std_logic_vector(31 downto 0);
         DA_reg   : out STD_LOGIC_VECTOR(3 downto 0);
         RFData   : out STD_LOGIC_VECTOR(31 downto 0)
         );
@@ -112,7 +113,7 @@ signal EnableIF, EnableID, EnableEX, EnableMEM, EnableWB : std_logic;
 
 -- Instruction & PC signals
 signal Instruction : std_logic_vector(31 downto 0);
-signal PCValue, PCLoadValue : std_logic_vector(31 downto 0);
+signal PCValue, PCLoadValue, PCAddOne : std_logic_vector(31 downto 0);
 signal BC : std_logic_vector(3 downto 0);
 signal PCLoadEnable : std_logic;
 signal PL : std_logic_vector(1 downto 0);
@@ -145,7 +146,7 @@ EnableWB<='1';
 -- IF Stage
 --------------------------------------------------------------------------------------------------------------------------
 -- Instruction Fetch (IF) Stage Logic
-IFetch: InstructionFetch port map(CLK=>CLK, StageEnable=>'1', PCLoadEnable=>PCLoadEnable, PCLoadValue=>PCLoadValue, Instruction=>Instruction, PCCurrValue=>PCValue);
+IFetch: InstructionFetch port map(CLK=>CLK, StageEnable=>'1', PCLoadEnable=>PCLoadEnable, PCLoadValue=>PCLoadValue, Instruction=>Instruction, PCCurrValue=>PCValue, PCAddOne=>PCAddOne);
 
 --------------------------------------------------------------------------------------------------------------------------
 -- ID Stage
@@ -166,7 +167,7 @@ MEM: Memory port map(CLK=>CLK, StageEnable=>'1', A =>A, B => B, Din=>ALUData, KN
 --------------------------------------------------------------------------------------------------------------------------
 -- WB Stage
 --------------------------------------------------------------------------------------------------------------------------
-WB: WriteBack port map(enable=>'1', DA=>DA, MD=>MD, ALUData=>ALUData, MemData=>MemData, DA_reg=>DA_reg, RFData=>RFData);
+WB: WriteBack port map(enable=>'1', DA=>DA, MD=>MD, ALUData=>ALUData, MemData=>MemData, LinkEn=>LinkEn, PCAddOne=>PCAddOne, DA_reg=>DA_reg, RFData=>RFData);
 
 --------------------------------------------------------------------------------------------------------------------------
 -- Register File

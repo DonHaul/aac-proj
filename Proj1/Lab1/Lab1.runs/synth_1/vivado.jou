@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Mar 27 15:28:31 2018
-# Process ID: 75164
-# Current directory: D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.runs/synth_1
+# Start of session at: Tue Mar 27 17:50:30 2018
+# Process ID: 4068
+# Current directory: D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.runs/synth_1
 # Command line: vivado.exe -log SingleCycle.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SingleCycle.tcl
-# Log file: D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.runs/synth_1/SingleCycle.vds
-# Journal file: D:/User/Desktop/aac-proj/Proj1/Lab1/Lab1.runs/synth_1\vivado.jou
+# Log file: D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.runs/synth_1/SingleCycle.vds
+# Journal file: D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source SingleCycle.tcl -notrace
