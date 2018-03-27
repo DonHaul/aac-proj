@@ -8,19 +8,30 @@ entity WriteBack is
         MD       : in STD_LOGIC;
         ALUData  : in STD_LOGIC_VECTOR(31 downto 0);
         MemData  : in STD_LOGIC_VECTOR(31 downto 0);
-        WR       : out STD_LOGIC;
+        LinkEn   : in STD_LOGIC;
+        PCAddOne : in std_logic_vector(31 downto 0);
+        -- WR       : out STD_LOGIC;
+        DA_reg   : out STD_LOGIC_VECTOR(3 downto 0);
         RFData   : out STD_LOGIC_VECTOR(31 downto 0)
         );
 end WriteBack;
 
 architecture Behavioral of WriteBack is
 
+signal SelMD : std_logic_vector(1 downto 0);
+
 begin
 
-WR <= '1' when Enable='1' and DA /= "0000" else '0';
+-- Added link support here
+DA_reg <= "0000" when Enable='0'
+          else "1111" when LinkEn='1'
+          else DA;
+--WR <= '1' when Enable='1' and DA /= "0000" else '0';
+SelMD <= LinkEn & MD;
 
-with MD select
-    RFData <= ALUData when '0',
-              MemData when others;
+with SelMD select
+    RFData <= ALUData when "00",
+              MemData when "01",
+              PcAddOne when others;
     
 end Behavioral;

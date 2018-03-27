@@ -15,6 +15,7 @@ entity Execute is
     PC     : in std_logic_vector(31 downto 0);
     PCLoadValue : out std_logic_vector(31 downto 0);
     PCLoadEnable : out std_logic;
+    LinkEn: out STD_LOGIC;
     DataD  : out std_logic_vector(n_bits-1 downto 0)
   );
 end Execute;
@@ -37,7 +38,8 @@ component branchcontrol
            AD : in STD_LOGIC_VECTOR (31 downto 0);
            Flags : in STD_LOGIC_VECTOR(3 downto 0);
            PCLoad : out STD_LOGIC;
-           PCValue : out STD_LOGIC_VECTOR (31 downto 0));
+           PCValue : out STD_LOGIC_VECTOR (31 downto 0);
+           LinkEn: out STD_LOGIC);
 end component;
 
 signal OpA, OpB, AD : std_logic_vector(n_bits-1 downto 0);
@@ -59,9 +61,9 @@ with MB select
           B when others;
 
 -- instantiate the functional unit
-ALU: FunctionalUnit port map( A => OpA , B => OpB , FS => FS, D => DataD, FL => Flags);
+ALU: FunctionalUnit port map(A => OpA, B => OpB, FS => FS, D => DataD, FL => Flags);
 
 -- instantiate the Branch Control Unit
-UCS: BranchControl port map(PL=>PL, BC=>BC, PC=>PC, AD=>AD, Flags=>Flags, PCLoad=>PCLoadEnable, PCValue=>PCLoadValue);
+UCS: BranchControl port map(PL=>PL, BC=>BC, PC=>PC, AD=>AD, Flags=>Flags, PCLoad=>PCLoadEnable, PCValue=>PCLoadValue, LinkEn=>LinkEn);
 
 end Structural;

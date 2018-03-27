@@ -19,7 +19,8 @@ component InstructionFetch
            PCLoadEnable : in std_logic;
            PCLoadValue  : in std_logic_vector(31 downto 0);
            Instruction  : out std_logic_vector(31 downto 0);
-           PCCurrValue  : out std_logic_vector(31 downto 0)
+           PCCurrValue  : out std_logic_vector(31 downto 0);
+           PCAddOne     : out std_logic_vector(31 downto 0)
          );
 end component;
 
@@ -60,6 +61,7 @@ component Execute
     PC     : in std_logic_vector(31 downto 0);
     PCLoadValue : out std_logic_vector(31 downto 0);
     PCLoadEnable : out std_logic;
+    LinkEn: out STD_LOGIC;
     DataD  : out std_logic_vector(31 downto 0)
   );
 end component;
@@ -87,6 +89,8 @@ component WriteBack
         ALUData  : in STD_LOGIC_VECTOR(31 downto 0);
         MemData  : in STD_LOGIC_VECTOR(31 downto 0);
 --        WR       : out STD_LOGIC;
+        LinkEn: out STD_LOGIC;
+        DA_reg   : out STD_LOGIC_VECTOR(3 downto 0);
         RFData   : out STD_LOGIC_VECTOR(31 downto 0)
         );
 end component;
@@ -114,7 +118,7 @@ signal PCLoadEnable : std_logic;
 signal PL : std_logic_vector(1 downto 0);
 
 -- RF addressing and operand selection signals
-signal AA, BA, DA : std_logic_vector(3 downto 0);
+signal AA, BA, DA, DA_Reg: std_logic_vector(3 downto 0);
 signal MA, MB, MD : std_logic;
 signal MMA, MMB : std_logic_vector(1 downto 0);
 
@@ -126,6 +130,9 @@ signal MW : std_logic;
 signal KNS : std_logic_vector(31 downto 0);
 signal A, B: std_logic_vector(31 downto 0);
 signal ALUData, MemData, RFData: std_logic_vector(31 downto 0);
+
+-- Link Signal
+signal LinkEn : std_logic;
 
 begin
 
@@ -159,12 +166,12 @@ MEM: Memory port map(CLK=>CLK, StageEnable=>'1', A =>A, B => B, Din=>ALUData, KN
 --------------------------------------------------------------------------------------------------------------------------
 -- WB Stage
 --------------------------------------------------------------------------------------------------------------------------
-WB: WriteBack port map(enable=>'1', DA=>DA, MD=>MD, ALUData=>ALUData, MemData=>MemData, RFData=>RFData);
+WB: WriteBack port map(enable=>'1', DA=>DA, MD=>MD, ALUData=>ALUData, MemData=>MemData, DA_reg=>DA_reg, RFData=>RFData);
 
 --------------------------------------------------------------------------------------------------------------------------
 -- Register File
 --------------------------------------------------------------------------------------------------------------------------
-RF: RegisterFile generic map(n_bits=>32) port map(CLK=>CLK, Data=>RFData, DA=>DA, AA=>AA, BA=>BA, A=>A, B=>B);
+RF: RegisterFile generic map(n_bits=>32) port map(CLK=>CLK, Data=>RFData, DA=>DA_reg, AA=>AA, BA=>BA, A=>A, B=>B);
 
 --------------------------------------------------------------------------------------------------------------------------
 -- Output

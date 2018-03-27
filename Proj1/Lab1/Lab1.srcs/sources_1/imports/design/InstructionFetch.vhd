@@ -9,7 +9,8 @@ entity InstructionFetch is
            PCLoadEnable : in std_logic;
            PCLoadValue  : in std_logic_vector(31 downto 0);
            Instruction  : out std_logic_vector(31 downto 0);
-           PCCurrValue  : out std_logic_vector(31 downto 0)
+           PCCurrValue  : out std_logic_vector(31 downto 0);
+           PCAddOne     : out std_logic_vector(31 downto 0)
          );
 end InstructionFetch;
 
@@ -56,5 +57,6 @@ PC <= NextPC when StageEnable='1' and rising_edge(CLK);
 
 -- Output PC Value for current inst
 PCCurrValue <= (31 downto 8=>'0') & PC;
+PCAddOne <= (31 downto 8=>'0') & PCplusOne;
 
 end Structural;
