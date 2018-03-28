@@ -4,14 +4,14 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity branchcontrol is
 Generic (n_bits : integer := 32);
-    Port ( 
+    Port (
            PL : in STD_LOGIC_VECTOR(1 downto 0);
            BC : in STD_LOGIC_VECTOR(3 downto 0);
            PC : in STD_LOGIC_VECTOR (31 downto 0);
            AD : in STD_LOGIC_VECTOR (31 downto 0);
            Flags : in STD_LOGIC_VECTOR(3 downto 0);
            PCLoad : out STD_LOGIC;
-           LinkEn: out STD_LOGIC; 
+           LinkEn: out STD_LOGIC;
            PCValue : out STD_LOGIC_VECTOR (31 downto 0));
 end branchcontrol;
 
@@ -79,6 +79,6 @@ LinkEn <= PCEn and link;
 
 with  PL(0) select
     PCValue <= D    when '0',
-               PC  when others;
+               AD  when others;
 
 end Behavioral;

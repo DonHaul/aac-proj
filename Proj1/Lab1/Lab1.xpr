@@ -3,11 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<<<<<<< HEAD
 <Project Version="7" Minor="35" Path="D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.xpr">
-=======
-<Project Version="7" Minor="35" Path="D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.xpr">
->>>>>>> 7e1232f8b0e460d4dc1da868d6ad3d2801011796
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="5b51dfda4d3c463bbe665987e04d6ca8"/>
@@ -36,11 +32,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="kcu116"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-<<<<<<< HEAD
-    <Option Name="WTXSimLaunchSim" Val="2"/>
-=======
-    <Option Name="WTXSimLaunchSim" Val="0"/>
->>>>>>> 7e1232f8b0e460d4dc1da868d6ad3d2801011796
+    <Option Name="WTXSimLaunchSim" Val="47"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
