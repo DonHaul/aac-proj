@@ -12,6 +12,29 @@ end FiveStagePipeline;
 
 architecture Structural of FiveStagePipeline is
 
+component HazardUnit is
+    Port ( 
+            CLK : in STD_LOGIC;
+            Enable : in STD_LOGIC;
+            -- Data Hazards
+            Flag_A_EX : in STD_LOGIC;
+            Flag_B_EX : in STD_LOGIC;
+            Flag_A_MEM : in STD_LOGIC; 
+            Flag_B_MEM : in STD_LOGIC;
+            Flag_A_WB : in STD_LOGIC; 
+            Flag_B_WB: in STD_LOGIC;
+            -- Control Hazards
+            EX_PCLoadEnable : in STD_LOGIC;
+            ID_PL : in STD_LOGIC;
+            -- Hazard Solving
+            EnableIF : out STD_LOGIC;
+            EnableID : out STD_LOGIC;
+            EnableEX : out STD_LOGIC;
+            EnableMEM : out STD_LOGIC;
+            EnableWB : out STD_LOGIC 
+          );
+end component;
+
 component InstructionFetch
     Port (
            CLK          : in std_logic;
@@ -56,6 +79,21 @@ component InstructionDecode
            MD       : out STD_LOGIC;
            DA       : out STD_LOGIC_VECTOR ( 3 downto 0)
           );
+end component;
+
+component ScoreBoard is
+    Port ( CLK : in STD_LOGIC;
+           Enable : in STD_LOGIC;
+           StageEnable : in STD_LOGIC;
+           AA : in STD_LOGIC_VECTOR (3 downto 0);
+           BA : in STD_LOGIC_VECTOR (3 downto 0);
+           DA : in STD_LOGIC_VECTOR (3 downto 0);
+           Flag_A_EX : out STD_LOGIC;
+           Flag_B_EX : out STD_LOGIC;
+           Flag_A_MEM : out STD_LOGIC; 
+           Flag_B_MEM : out STD_LOGIC;
+           Flag_A_WB : out STD_LOGIC; 
+           Flag_B_WB: out STD_LOGIC);
 end component;
 
 component IDEX_Stage_Registers
@@ -241,13 +279,15 @@ signal EX_ALUData, MEM_ALUData, WB_ALUData: std_logic_vector(31 downto 0);
 signal MEM_MemData, WB_MemData: std_logic_vector(31 downto 0);
 signal WB_RFData: std_logic_vector(31 downto 0);
 
+-- Data Hazards
+signal Flags_SB : std_logic_vector(5 downto 0);
+
 begin
 
-EnableIF<='1';
-EnableID<='1';
-EnableEX<='1';
-EnableMEM<='1';
-EnableWB<='1';
+-- Manages the pipeline to avoid Hazards
+HU: HazardUnit port map( CLK=>CLK , Enable=>'1', 
+                         Flag_A_EX=>Flags_SB(5), Flag_B_EX=>Flags_SB(4), Flag_A_MEM=>Flags_SB(3), Flag_B_MEM=>Flags_SB(2), Flag_A_WB=>Flags_SB(1), Flag_B_WB=>Flags_SB(0),
+                         EX_PCLoadEnable=>EX_PCLoadEnable, ID_PL=>ID_PL(1), EnableIF=>EnableIF, EnableID=>EnableID, EnableEX=>EnableEX, EnableMEM=>EnableMEM, EnableWB=>EnableWB );
 
 --------------------------------------------------------------------------------------------------------------------------
 -- IF Stage
@@ -264,6 +304,9 @@ IF2ID: IFID_Stage_Registers port map(CLK=>CLK, Enable=>EnableIF,
 --------------------------------------------------------------------------------------------------------------------------
 -- Instruction Decode (ID) Stage
 ID: InstructionDecode port map(Instruction=>ID_Instruction, AA=>ID_AA, MA=>ID_MA, BA=>ID_BA, MB=>ID_MB, KNS=>ID_KNS, FS=>ID_FS, PL=>ID_PL, BC=>ID_BC, MMA=>ID_MMA, MMB=>ID_MMB, MW=>ID_MW, MD=>ID_MD, DA=>ID_DA);
+-- Score Board (ID) Stage
+SB: ScoreBoard port map( CLK=>CLK, Enable=>'1', StageEnable=>EnableID, AA=>ID_AA, BA=>ID_BA, DA=>ID_DA, 
+                         Flag_A_EX=>Flags_SB(5), Flag_B_EX=>Flags_SB(4), Flag_A_MEM=>Flags_SB(3), Flag_B_MEM=>Flags_SB(2), Flag_A_WB=>Flags_SB(1), Flag_B_WB=>Flags_SB(0) );
 -- Registers between ID and EX Stage
 ID2EX: IDEX_Stage_Registers port map(CLK=>CLK, Enable=>EnableID,
     ID_I=>ID_Instruction, ID_PC=>ID_PC, ID_A=>ID_A, ID_PCAddOne=>ID_PCAddOne, ID_B=>ID_B, ID_KNS=>ID_KNS, ID_MA=>ID_MA, ID_MB=>ID_MB, ID_MMA=>ID_MMA, ID_MMB=>ID_MMB, ID_MW=>ID_MW, ID_FS=>ID_FS, ID_PL=>ID_PL, ID_BC=>ID_BC, ID_MD=>ID_MD, ID_DA=>ID_DA,

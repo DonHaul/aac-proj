@@ -4,10 +4,16 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity ScoreBoard is
     Port ( CLK : in STD_LOGIC;
            Enable : in STD_LOGIC;
+           StageEnable : in STD_LOGIC;
            AA : in STD_LOGIC_VECTOR (3 downto 0);
            BA : in STD_LOGIC_VECTOR (3 downto 0);
            DA : in STD_LOGIC_VECTOR (3 downto 0);
-           DataHazard : out STD_LOGIC);
+           Flag_A_EX : out STD_LOGIC;
+           Flag_B_EX : out STD_LOGIC;
+           Flag_A_MEM : out STD_LOGIC; 
+           Flag_B_MEM : out STD_LOGIC;
+           Flag_A_WB : out STD_LOGIC; 
+           Flag_B_WB: out STD_LOGIC);
 end ScoreBoard;
 
 architecture Behavioral of ScoreBoard is
@@ -41,21 +47,25 @@ component RegisterN
 	);
 end component;
 
-signal Flags_ID, Flags_EX, Flags_MEM, Flags_WB : STD_LOGIC_VECTOR(15 downto 0);
-signal Flags_A, Flags_B : STD_LOGIC_VECTOR(2 downto 0);
-signal Flag_A_EX, Flag_B_EX, Flag_A_MEM, Flag_B_MEM, Flag_A_WB, Flag_B_WB: STD_LOGIC;   
+signal Decode_Out, Flags_ID, Flags_EX, Flags_MEM, Flags_WB : STD_LOGIC_VECTOR(15 downto 0);
+signal Flags_A, Flags_B : STD_LOGIC_VECTOR(2 downto 0);   
 
 begin
 
 -- Flags for this ID stage are generated using a decoder from DA
 Decoder1: Decoder port map (A => DA,
-    D0=>Flags_ID(0), D1=>Flags_ID(1),  D2=>Flags_ID(2) ,  D3=>Flags_ID(3),   D4=>Flags_ID(4) ,  D5=>Flags_ID(5) ,  D6=>Flags_ID(6) ,  D7=>Flags_ID(7),
-    D8=>Flags_ID(8), D9=>Flags_ID(9), D10=>Flags_ID(10), D11=>Flags_ID(11), D12=>Flags_ID(12), D13=>Flags_ID(13), D14=>Flags_ID(14), D15=>Flags_ID(15));
+    D0=>Decode_Out(0), D1=>Decode_Out(1),  D2=>Decode_Out(2) ,  D3=>Decode_Out(3),   D4=>Decode_Out(4) ,  D5=>Decode_Out(5) ,  D6=>Decode_Out(6) ,  D7=>Decode_Out(7),
+    D8=>Decode_Out(8), D9=>Decode_Out(9), D10=>Decode_Out(10), D11=>Decode_Out(11), D12=>Decode_Out(12), D13=>Decode_Out(13), D14=>Decode_Out(14), D15=>Decode_Out(15));
     
 -- Propagates the flags (with delay) and except R0's
 ID_EX_reg: RegisterN generic map(n_bits=>14)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_ID(15 downto 1), Q=>Flags_EX(15 downto 1));
 EX_MEM_reg: RegisterN generic map(n_bits=>14)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_EX(15 downto 1), Q=>Flags_MEM(15 downto 1));
 MEM_WB_reg: RegisterN generic map(n_bits=>14)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_EX(15 downto 1), Q=>Flags_WB(15 downto 1));
+
+-- If this stage is not enabled, all flags are reset to zero (no real write)
+with StageEnable select
+    Flags_ID <= (others => '0') when '0',
+                Decode_Out when others;    
 
 -- R0 is not a real register, so it does not genereate data hazards
 Flags_EX(0) <= '0'; Flags_MEM(0) <= '0'; Flags_WB(0) <= '0';   
@@ -101,7 +111,5 @@ with BA select
 -- Assigs flags corresponding to the current operands
 Flag_A_EX <= Flags_A(2); Flag_A_MEM <= Flags_A(1); Flag_A_WB <= Flags_A(0);
 Flag_B_EX <= Flags_B(2); Flag_B_MEM <= Flags_B(1); Flag_B_WB <= Flags_B(0);
-
-DataHazard <= Flag_A_EX OR Flag_A_MEM OR Flag_A_WB OR Flag_B_EX OR Flag_B_MEM OR Flag_B_WB;
 
 end Behavioral;
