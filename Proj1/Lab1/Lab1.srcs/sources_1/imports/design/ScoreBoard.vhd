@@ -58,9 +58,9 @@ Decoder1: Decoder port map (A => DA,
     D8=>Decode_Out(8), D9=>Decode_Out(9), D10=>Decode_Out(10), D11=>Decode_Out(11), D12=>Decode_Out(12), D13=>Decode_Out(13), D14=>Decode_Out(14), D15=>Decode_Out(15));
     
 -- Propagates the flags (with delay) and except R0's
-ID_EX_reg: RegisterN generic map(n_bits=>14)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_ID(15 downto 1), Q=>Flags_EX(15 downto 1));
-EX_MEM_reg: RegisterN generic map(n_bits=>14)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_EX(15 downto 1), Q=>Flags_MEM(15 downto 1));
-MEM_WB_reg: RegisterN generic map(n_bits=>14)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_EX(15 downto 1), Q=>Flags_WB(15 downto 1));
+ID_EX_reg: RegisterN generic map(n_bits=>15)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_ID(15 downto 1), Q=>Flags_EX(15 downto 1));
+EX_MEM_reg: RegisterN generic map(n_bits=>15)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_EX(15 downto 1), Q=>Flags_MEM(15 downto 1));
+MEM_WB_reg: RegisterN generic map(n_bits=>15)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_EX(15 downto 1), Q=>Flags_WB(15 downto 1));
 
 -- If this stage is not enabled, all flags are reset to zero (no real write)
 with StageEnable select
