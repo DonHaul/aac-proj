@@ -56,10 +56,10 @@ Shifter: RegisterN generic map(n_bits=>4) port map(CLK=>CLK, Enable=>Enable,
                       D(3)=>Next_Nop_ID, D(2)=>Next_Nop_EX, D(1)=>Next_Nop_MEM, D(0)=>Next_Nop_WB,
                       Q(3)=>Nop_ID, Q(2)=>Nop_EX, Q(1)=>Nop_MEM, Q(0)=>Nop_WB);
                       
-EnableIF <= Stall_IF;
-EnableID <= Stall_ID OR Nop_ID;
-EnableEX <= Nop_EX;
-EnableMEM <= Nop_MEM;
-EnableWB <= Nop_WB;
+EnableIF <= NOT Stall_IF;
+EnableID <= Stall_ID NAND Nop_ID;
+EnableEX <= NOT Nop_EX;
+EnableMEM <= NOT Nop_MEM;
+EnableWB <= NOT Nop_WB;
 
 end Behavioral;
