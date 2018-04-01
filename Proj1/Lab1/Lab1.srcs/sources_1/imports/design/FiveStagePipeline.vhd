@@ -12,7 +12,7 @@ end FiveStagePipeline;
 
 architecture Structural of FiveStagePipeline is
 
-component HazardUnit is
+component HazardUnit
     Port ( 
             CLK : in STD_LOGIC;
             Enable : in STD_LOGIC;
@@ -81,7 +81,7 @@ component InstructionDecode
           );
 end component;
 
-component ScoreBoard is
+component ScoreBoard
     Port ( CLK : in STD_LOGIC;
            Enable : in STD_LOGIC;
            StageEnable : in STD_LOGIC;
