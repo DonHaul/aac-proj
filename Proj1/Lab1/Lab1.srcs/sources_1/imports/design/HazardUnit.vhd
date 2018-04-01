@@ -35,7 +35,7 @@ component RegisterN
 			);
 end component;
 
-signal DataHazard : STD_LOGIC;
+signal DataHazard, ControlHazard_ID, ControlHazard_EX : STD_LOGIC;
 signal Stall_IF, Stall_ID : STD_LOGIC;
 signal Next_Nop_ID, Next_Nop_EX, Next_Nop_MEM, Next_Nop_WB : STD_LOGIC;
 signal Nop_ID, Nop_EX, Nop_MEM, Nop_WB : STD_LOGIC;
@@ -43,11 +43,14 @@ signal Nop_ID, Nop_EX, Nop_MEM, Nop_WB : STD_LOGIC;
 begin
 
 DataHazard <= Flag_A_EX OR Flag_B_EX OR Flag_A_MEM OR Flag_B_MEM OR Flag_A_WB OR Flag_B_WB;
+Real_DataHazard <= DataHazard AND (NOT Nop_ID);
+ControlHazard_ID <= (ID_PL AND (NOT Nop_ID));
+ControlHazard_EX <= (EX_PCLoadEnable AND (NOT Nop_EX));
 
-Next_Nop_ID <= (EX_PCLoadEnable AND (NOT Nop_EX)) OR (ID_PL AND (NOT Nop_ID));
-Next_Nop_EX <= (DataHazard OR Nop_ID);        --(DataHazard AND (NOT Nop_ID)) OR Nop_ID; 
-Stall_IF <= (DataHazard OR ID_PL) AND (NOT Nop_ID);
-Stall_ID <= (DataHazard) AND (NOT Nop_ID);
+Next_Nop_ID <= ControlHazard_ID OR ControlHazard_EX;
+Next_Nop_EX <= Real_DataHazard OR Nop_ID;        --(DataHazard AND (NOT Nop_ID)) OR Nop_ID; 
+Stall_IF <= Real_DataHazard OR ControlHazard_ID;
+Stall_ID <= Real_DataHazard;
 
 Next_Nop_MEM <= Nop_EX;
 Next_Nop_WB <= Nop_WB;
