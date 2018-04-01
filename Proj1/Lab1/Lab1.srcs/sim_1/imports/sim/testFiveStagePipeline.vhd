@@ -16,10 +16,10 @@ component FiveStagePipeline
 end component;
 
 signal CLK: std_logic := '1';
-signal I,Data: std_logic_vector(31 downto 0):= (others =>'0');
+signal I,Data: std_logic_vector(31 downto 0) := (others =>'0');
 signal CountCycles : integer := 0;
-signal PC: std_logic_vector :=(31 downto 0):= (others =>'00000000000000000000000011110000');
-                                                        
+signal PC: std_logic_vector(31 downto 0) := "00000000000000000000000011110000";
+
 
 begin
 
