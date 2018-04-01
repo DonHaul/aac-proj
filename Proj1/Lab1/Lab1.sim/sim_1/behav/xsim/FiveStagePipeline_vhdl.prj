@@ -1,0 +1,30 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Lab1.srcs/sources_1/imports/design/ArithmeticUnit.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/ArithmeticUnitI.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/Buf.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/DataMemory.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/Decoder.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/EXMEM_Stage_Registers.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/Execute.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/FullAdder.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/FunctionalUnit.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/IDEX_Stage_Registers.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/IFID_Stage_Registers.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/InstructionDecode.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/InstructionFetch.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/InstructionMemory.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/LogicUnit.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/LogicUnitI.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/MEMWB_Stage_Registers.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/Memory.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/RegisterFile.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/RegisterN.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/Shifter.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/WriteBack.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/Zero.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/branchcontrol.vhd" \
+"../../../../Lab1.srcs/sources_1/imports/design/FiveStagePipeline.vhd" \
+
+# Do not sort compile order
+nosort
