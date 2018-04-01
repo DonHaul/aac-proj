@@ -10,9 +10,9 @@ entity ScoreBoard is
            DA : in STD_LOGIC_VECTOR (3 downto 0);
            Flag_A_EX : out STD_LOGIC;
            Flag_B_EX : out STD_LOGIC;
-           Flag_A_MEM : out STD_LOGIC; 
+           Flag_A_MEM : out STD_LOGIC;
            Flag_B_MEM : out STD_LOGIC;
-           Flag_A_WB : out STD_LOGIC; 
+           Flag_A_WB : out STD_LOGIC;
            Flag_B_WB: out STD_LOGIC);
 end ScoreBoard;
 
@@ -48,7 +48,7 @@ component RegisterN
 end component;
 
 signal Decode_Out, Flags_ID, Flags_EX, Flags_MEM, Flags_WB : STD_LOGIC_VECTOR(15 downto 0);
-signal Flags_A, Flags_B : STD_LOGIC_VECTOR(2 downto 0);   
+signal Flags_A, Flags_B : STD_LOGIC_VECTOR(2 downto 0);
 
 begin
 
@@ -56,19 +56,19 @@ begin
 Decoder1: Decoder port map (A => DA,
     D0=>Decode_Out(0), D1=>Decode_Out(1),  D2=>Decode_Out(2) ,  D3=>Decode_Out(3),   D4=>Decode_Out(4) ,  D5=>Decode_Out(5) ,  D6=>Decode_Out(6) ,  D7=>Decode_Out(7),
     D8=>Decode_Out(8), D9=>Decode_Out(9), D10=>Decode_Out(10), D11=>Decode_Out(11), D12=>Decode_Out(12), D13=>Decode_Out(13), D14=>Decode_Out(14), D15=>Decode_Out(15));
-    
+
 -- Propagates the flags (with delay) and except R0's
 ID_EX_reg: RegisterN generic map(n_bits=>15)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_ID(15 downto 1), Q=>Flags_EX(15 downto 1));
 EX_MEM_reg: RegisterN generic map(n_bits=>15)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_EX(15 downto 1), Q=>Flags_MEM(15 downto 1));
-MEM_WB_reg: RegisterN generic map(n_bits=>15)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_EX(15 downto 1), Q=>Flags_WB(15 downto 1));
+MEM_WB_reg: RegisterN generic map(n_bits=>15)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_MEM(15 downto 1), Q=>Flags_WB(15 downto 1));
 
 -- If this stage is not enabled, all flags are reset to zero (no real write)
 with StageEnable select
     Flags_ID <= (others => '0') when '0',
-                Decode_Out when others;    
+                Decode_Out when others;
 
 -- R0 is not a real register, so it does not genereate data hazards
-Flags_EX(0) <= '0'; Flags_MEM(0) <= '0'; Flags_WB(0) <= '0';   
+Flags_EX(0) <= '0'; Flags_MEM(0) <= '0'; Flags_WB(0) <= '0';
 
 -- Operand multiplexer A: select flags to be checked
 with AA select
