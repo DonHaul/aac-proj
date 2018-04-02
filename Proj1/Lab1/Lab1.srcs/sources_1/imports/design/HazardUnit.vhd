@@ -47,7 +47,7 @@ Real_DataHazard <= DataHazard AND (NOT Nop_ID);
 ControlHazard_ID <= (ID_PL AND (NOT Nop_ID));
 ControlHazard_EX <= (EX_PCLoadEnable AND (NOT Nop_EX));
 
-Next_Nop_ID <= ControlHazard_ID OR ControlHazard_EX;
+Next_Nop_ID <= (ControlHazard_ID and (not Real_DataHazard)) or ControlHazard_EX ;
 Next_Nop_EX <= Real_DataHazard OR Nop_ID;        --(DataHazard AND (NOT Nop_ID)) OR Nop_ID;
 Stall_IF <= Real_DataHazard OR ControlHazard_ID;
 Stall_ID <= Real_DataHazard;
