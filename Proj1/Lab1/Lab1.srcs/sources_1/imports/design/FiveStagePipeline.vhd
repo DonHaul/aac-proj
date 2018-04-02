@@ -137,6 +137,7 @@ end component;
 
 component Execute
   Port (
+    Enable     : in std_logic;
     A      : in std_logic_vector(31 downto 0);
     B      : in std_logic_vector(31 downto 0);
     MA     : in std_logic;
@@ -315,7 +316,7 @@ ID2EX: IDEX_Stage_Registers port map(CLK=>CLK, Enable=>EnableID,
 --------------------------------------------------------------------------------------------------------------------------
 -- EX Stage
 --------------------------------------------------------------------------------------------------------------------------
-EX: Execute port map(A => EX_A, B => EX_B, MA=>EX_MA, MB=>EX_MB, KNS=>EX_KNS, FS=>EX_FS, PL=>EX_PL, BC=>EX_BC, PC=>EX_PC, PCLoadEnable=>EX_PCLoadEnable, PCLoadValue=>EX_PCLoadValue, LinkEn=>EX_LinkEn, DataD=>EX_ALUData);
+EX: Execute port map(Enable => EnableEX, A => EX_A, B => EX_B, MA=>EX_MA, MB=>EX_MB, KNS=>EX_KNS, FS=>EX_FS, PL=>EX_PL, BC=>EX_BC, PC=>EX_PC, PCLoadEnable=>EX_PCLoadEnable, PCLoadValue=>EX_PCLoadValue, LinkEn=>EX_LinkEn, DataD=>EX_ALUData);
 -- Registers between EX and MEM Stage
 EX2MEM: EXMEM_Stage_Registers port map(CLK=>CLK, Enable=>EnableEX,
      EX_I=>EX_Instruction,  EX_PC=>EX_PC, EX_PCAddOne=>EX_PCAddOne,  EX_A=>EX_A,   EX_B=>EX_B,   EX_KNS=>EX_KNS,   EX_D=>EX_ALUData,   EX_MMA=>EX_MMA,   EX_MMB=>EX_MMB,   EX_MW=>EX_MW,   EX_MD=>EX_MD,   EX_DA=>EX_DA,  EX_LinkEn=>EX_LinkEn,
