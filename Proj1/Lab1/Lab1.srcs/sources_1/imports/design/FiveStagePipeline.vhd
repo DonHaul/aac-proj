@@ -13,15 +13,15 @@ end FiveStagePipeline;
 architecture Structural of FiveStagePipeline is
 
 component HazardUnit
-    Port ( 
+    Port (
             CLK : in STD_LOGIC;
             Enable : in STD_LOGIC;
             -- Data Hazards
             Flag_A_EX : in STD_LOGIC;
             Flag_B_EX : in STD_LOGIC;
-            Flag_A_MEM : in STD_LOGIC; 
+            Flag_A_MEM : in STD_LOGIC;
             Flag_B_MEM : in STD_LOGIC;
-            Flag_A_WB : in STD_LOGIC; 
+            Flag_A_WB : in STD_LOGIC;
             Flag_B_WB: in STD_LOGIC;
             -- Control Hazards
             EX_PCLoadEnable : in STD_LOGIC;
@@ -31,7 +31,7 @@ component HazardUnit
             EnableID : out STD_LOGIC;
             EnableEX : out STD_LOGIC;
             EnableMEM : out STD_LOGIC;
-            EnableWB : out STD_LOGIC 
+            EnableWB : out STD_LOGIC
           );
 end component;
 
@@ -90,9 +90,9 @@ component ScoreBoard
            DA : in STD_LOGIC_VECTOR (3 downto 0);
            Flag_A_EX : out STD_LOGIC;
            Flag_B_EX : out STD_LOGIC;
-           Flag_A_MEM : out STD_LOGIC; 
+           Flag_A_MEM : out STD_LOGIC;
            Flag_B_MEM : out STD_LOGIC;
-           Flag_A_WB : out STD_LOGIC; 
+           Flag_A_WB : out STD_LOGIC;
            Flag_B_WB: out STD_LOGIC);
 end component;
 
@@ -285,7 +285,7 @@ signal Flags_SB : std_logic_vector(5 downto 0);
 begin
 
 -- Manages the pipeline to avoid Hazards
-HU: HazardUnit port map( CLK=>CLK , Enable=>'1', 
+HU: HazardUnit port map( CLK=>CLK , Enable=>'1',
                          Flag_A_EX=>Flags_SB(5), Flag_B_EX=>Flags_SB(4), Flag_A_MEM=>Flags_SB(3), Flag_B_MEM=>Flags_SB(2), Flag_A_WB=>Flags_SB(1), Flag_B_WB=>Flags_SB(0),
                          EX_PCLoadEnable=>EX_PCLoadEnable, ID_PL=>ID_PL(1), EnableIF=>EnableIF, EnableID=>EnableID, EnableEX=>EnableEX, EnableMEM=>EnableMEM, EnableWB=>EnableWB );
 
@@ -293,7 +293,7 @@ HU: HazardUnit port map( CLK=>CLK , Enable=>'1',
 -- IF Stage
 --------------------------------------------------------------------------------------------------------------------------
 -- Instruction Fetch (IF) Stage Logic
-IFetch: InstructionFetch port map(CLK=>CLK, StageEnable=>EnableIF, PCLoadEnable=>EX_PCLoadEnable, PCLoadValue=>EX_PCLoadValue, Instruction=>IF_Instruction, PCCurrValue=>IF_PC);
+IFetch: InstructionFetch port map(CLK=>CLK, StageEnable=>EnableIF, PCLoadEnable=>EX_PCLoadEnable, PCLoadValue=>EX_PCLoadValue, Instruction=>IF_Instruction, PCCurrValue=>IF_PC, PCAddOne=>IF_PCAddOne);
 -- Registers between IF and ID Stage
 IF2ID: IFID_Stage_Registers port map(CLK=>CLK, Enable=>EnableIF,
     IF_PC=>IF_PC, IF_I=>IF_Instruction, IF_PCAddOne=>IF_PCAddOne,
@@ -305,7 +305,7 @@ IF2ID: IFID_Stage_Registers port map(CLK=>CLK, Enable=>EnableIF,
 -- Instruction Decode (ID) Stage
 ID: InstructionDecode port map(Instruction=>ID_Instruction, AA=>ID_AA, MA=>ID_MA, BA=>ID_BA, MB=>ID_MB, KNS=>ID_KNS, FS=>ID_FS, PL=>ID_PL, BC=>ID_BC, MMA=>ID_MMA, MMB=>ID_MMB, MW=>ID_MW, MD=>ID_MD, DA=>ID_DA);
 -- Score Board (ID) Stage
-SB: ScoreBoard port map( CLK=>CLK, Enable=>'1', StageEnable=>EnableID, AA=>ID_AA, BA=>ID_BA, DA=>ID_DA, 
+SB: ScoreBoard port map( CLK=>CLK, Enable=>'1', StageEnable=>EnableID, AA=>ID_AA, BA=>ID_BA, DA=>ID_DA,
                          Flag_A_EX=>Flags_SB(5), Flag_B_EX=>Flags_SB(4), Flag_A_MEM=>Flags_SB(3), Flag_B_MEM=>Flags_SB(2), Flag_A_WB=>Flags_SB(1), Flag_B_WB=>Flags_SB(0) );
 -- Registers between ID and EX Stage
 ID2EX: IDEX_Stage_Registers port map(CLK=>CLK, Enable=>EnableID,
