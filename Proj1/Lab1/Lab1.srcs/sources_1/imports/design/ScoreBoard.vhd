@@ -8,6 +8,7 @@ entity ScoreBoard is
            AA : in STD_LOGIC_VECTOR (3 downto 0);
            BA : in STD_LOGIC_VECTOR (3 downto 0);
            DA : in STD_LOGIC_VECTOR (3 downto 0);
+           LinkEn_EX : in STD_LOGIC;
            Flag_A_EX : out STD_LOGIC;
            Flag_B_EX : out STD_LOGIC;
            Flag_A_MEM : out STD_LOGIC;
@@ -49,6 +50,7 @@ end component;
 
 signal Decode_Out, Flags_ID, Flags_EX, Flags_MEM, Flags_WB : STD_LOGIC_VECTOR(15 downto 0);
 signal Flags_A, Flags_B : STD_LOGIC_VECTOR(2 downto 0);
+signal Flag_EX_Link : STD_LOGIC;
 
 begin
 
@@ -59,7 +61,7 @@ Decoder1: Decoder port map (A => DA,
 
 -- Propagates the flags (with delay) and except R0's
 ID_EX_reg: RegisterN generic map(n_bits=>15)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_ID(15 downto 1), Q=>Flags_EX(15 downto 1));
-EX_MEM_reg: RegisterN generic map(n_bits=>15)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_EX(15 downto 1), Q=>Flags_MEM(15 downto 1));
+EX_MEM_reg: RegisterN generic map(n_bits=>15)  port map(CLK=>CLK, Enable=>Enable, D(14)=>Flag_EX_Link, D(13 downto 0)=>Flags_EX(14 downto 1), Q=>Flags_MEM(15 downto 1));
 MEM_WB_reg: RegisterN generic map(n_bits=>15)  port map(CLK=>CLK, Enable=>Enable, D=>Flags_MEM(15 downto 1), Q=>Flags_WB(15 downto 1));
 
 -- If this stage is not enabled, all flags are reset to zero (no real write)
@@ -69,6 +71,9 @@ with StageEnable select
 
 -- R0 is not a real register, so it does not genereate data hazards
 Flags_EX(0) <= '0'; Flags_MEM(0) <= '0'; Flags_WB(0) <= '0';
+
+-- Fix for the link exception (which changes the R15, with data currently on EX)
+Flag_EX_Link <= Flags_EX(15) OR LinkEn_EX;
 
 -- Operand multiplexer A: select flags to be checked
 with AA select

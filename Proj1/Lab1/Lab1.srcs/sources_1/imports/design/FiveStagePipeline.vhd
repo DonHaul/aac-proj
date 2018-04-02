@@ -88,6 +88,7 @@ component ScoreBoard
            AA : in STD_LOGIC_VECTOR (3 downto 0);
            BA : in STD_LOGIC_VECTOR (3 downto 0);
            DA : in STD_LOGIC_VECTOR (3 downto 0);
+           LinkEn_EX : in STD_LOGIC;
            Flag_A_EX : out STD_LOGIC;
            Flag_B_EX : out STD_LOGIC;
            Flag_A_MEM : out STD_LOGIC;
@@ -306,7 +307,7 @@ IF2ID: IFID_Stage_Registers port map(CLK=>CLK, Enable=>EnableIF,
 -- Instruction Decode (ID) Stage
 ID: InstructionDecode port map(Instruction=>ID_Instruction, AA=>ID_AA, MA=>ID_MA, BA=>ID_BA, MB=>ID_MB, KNS=>ID_KNS, FS=>ID_FS, PL=>ID_PL, BC=>ID_BC, MMA=>ID_MMA, MMB=>ID_MMB, MW=>ID_MW, MD=>ID_MD, DA=>ID_DA);
 -- Score Board (ID) Stage
-SB: ScoreBoard port map( CLK=>CLK, Enable=>'1', StageEnable=>EnableID, AA=>ID_AA, BA=>ID_BA, DA=>ID_DA,
+SB: ScoreBoard port map( CLK=>CLK, Enable=>'1', StageEnable=>EnableID, AA=>ID_AA, BA=>ID_BA, DA=>ID_DA, LinkEn_EX=>EX_LinkEn,
                          Flag_A_EX=>Flags_SB(5), Flag_B_EX=>Flags_SB(4), Flag_A_MEM=>Flags_SB(3), Flag_B_MEM=>Flags_SB(2), Flag_A_WB=>Flags_SB(1), Flag_B_WB=>Flags_SB(0) );
 -- Registers between ID and EX Stage
 ID2EX: IDEX_Stage_Registers port map(CLK=>CLK, Enable=>EnableID,
