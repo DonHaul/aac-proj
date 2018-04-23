@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xcku5p-ffvb676-2-e" LaunchTime="1522553886">
   <File Type="PA-TCL" Name="FiveStagePipeline.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="FiveStagePipeline_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="FiveStagePipeline_reports.tcl"/>
   <File Type="RDS-RDS" Name="FiveStagePipeline.vds"/>
-  <File Type="RDS-UTIL" Name="FiveStagePipeline_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="FiveStagePipeline_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="FiveStagePipeline.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="FiveStagePipeline_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="FiveStagePipeline_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/design/ArithmeticUnit.vhd">
