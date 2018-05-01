@@ -2,20 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-<<<<<<< HEAD
-# Start of session at: Tue Mar 27 19:37:04 2018
-# Process ID: 88688
+# Start of session at: Sun Apr  1 04:38:09 2018
+# Process ID: 15244
 # Current directory: D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.runs/synth_1
-# Command line: vivado.exe -log SingleCycle.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SingleCycle.tcl
-# Log file: D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.runs/synth_1/SingleCycle.vds
+# Command line: vivado.exe -log FiveStagePipeline.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FiveStagePipeline.tcl
+# Log file: D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.runs/synth_1/FiveStagePipeline.vds
 # Journal file: D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.runs/synth_1\vivado.jou
-=======
-# Start of session at: Tue Mar 27 17:50:30 2018
-# Process ID: 4068
-# Current directory: D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.runs/synth_1
-# Command line: vivado.exe -log SingleCycle.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SingleCycle.tcl
-# Log file: D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.runs/synth_1/SingleCycle.vds
-# Journal file: D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.runs/synth_1\vivado.jou
->>>>>>> 7e1232f8b0e460d4dc1da868d6ad3d2801011796
 #-----------------------------------------------------------
-source SingleCycle.tcl -notrace
+source FiveStagePipeline.tcl -notrace

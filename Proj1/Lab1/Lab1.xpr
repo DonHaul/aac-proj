@@ -3,11 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<<<<<<< HEAD
 <Project Version="7" Minor="35" Path="D:/User/Desktop/N/aac-proj/Proj1/Lab1/Lab1.xpr">
-=======
-<Project Version="7" Minor="35" Path="D:/Data/Universidade/MEEC_0402/AAC/aac-proj/Proj1/Lab1/Lab1.xpr">
->>>>>>> 7e1232f8b0e460d4dc1da868d6ad3d2801011796
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="5b51dfda4d3c463bbe665987e04d6ca8"/>
@@ -36,11 +32,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="kcu116"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-<<<<<<< HEAD
-    <Option Name="WTXSimLaunchSim" Val="2"/>
-=======
-    <Option Name="WTXSimLaunchSim" Val="0"/>
->>>>>>> 7e1232f8b0e460d4dc1da868d6ad3d2801011796
+    <Option Name="WTXSimLaunchSim" Val="123"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -241,6 +233,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/design/HazardUnit.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/design/IDEX_Stage_Registers.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -268,6 +267,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/design/ScoreBoard.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/design/FiveStagePipeline.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -291,19 +297,19 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/imports/sim/testSingleCycle.vhd">
+      <File Path="$PSRCDIR/sim_1/imports/sim/testFiveStagePipeline.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sim_1/imports/sim/testSingleCycle.vhd"/>
-          <Attr Name="ImportTime" Val="1490280716"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sim_1/imports/sim/testFiveStagePipeline.vhd"/>
+          <Attr Name="ImportTime" Val="1490195230"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/imports/sim/testFiveStagePipeline.vhd">
+      <File Path="$PSRCDIR/sim_1/imports/sim/testSingleCycle.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sim_1/imports/sim/testFiveStagePipeline.vhd"/>
-          <Attr Name="ImportTime" Val="1490195230"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Documents/AAC_Lab1/Project2.srcs/sim_1/imports/sim/testSingleCycle.vhd"/>
+          <Attr Name="ImportTime" Val="1490280716"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -324,13 +330,19 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/testFiveStagePipeline_behav2.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="testSingleCycle"/>
+        <Option Name="TopModule" Val="testFiveStagePipeline"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/testFiveStagePipeline_behav2.wcfg"/>
       </Config>
     </FileSet>
   </FileSets>

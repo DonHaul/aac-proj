@@ -49,6 +49,7 @@ end component;
 
 component Execute
   Port (
+    Enable : in std_logic;
     A      : in std_logic_vector(31 downto 0);
     B      : in std_logic_vector(31 downto 0);
     MA     : in std_logic;
@@ -157,7 +158,7 @@ ID: InstructionDecode port map(Instruction=>Instruction, AA=>AA, MA=>MA, BA=>BA,
 --------------------------------------------------------------------------------------------------------------------------
 -- EX Stage
 --------------------------------------------------------------------------------------------------------------------------
-EX: Execute port map(A => A, B => B, MA=>MA, MB=>MB, KNS=>KNS, FS=>FS, PL=>PL, BC=>BC, LinkEn=>LinkEn, PC=>PCValue, PCLoadEnable=>PCLoadEnable, PCLoadValue=>PCLoadValue, DataD=>ALUData);
+EX: Execute port map(Enable =>EnableEX ,A => A, B => B, MA=>MA, MB=>MB, KNS=>KNS, FS=>FS, PL=>PL, BC=>BC, LinkEn=>LinkEn, PC=>PCValue, PCLoadEnable=>PCLoadEnable, PCLoadValue=>PCLoadValue, DataD=>ALUData);
 
 --------------------------------------------------------------------------------------------------------------------------
 -- MEM Stage

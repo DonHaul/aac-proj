@@ -7,6 +7,7 @@ entity IDEX_Stage_Registers is
        Enable : in STD_LOGIC;
        ID_PC  : in STD_LOGIC_VECTOR (31 downto 0);
        ID_I   : in STD_LOGIC_VECTOR (31 downto 0);
+       ID_PCAddOne : in STD_LOGIC_VECTOR (31 downto 0);
        ID_A   : in STD_LOGIC_VECTOR (31 downto 0);
        ID_B   : in STD_LOGIC_VECTOR (31 downto 0);
        ID_KNS : in STD_LOGIC_VECTOR (31 downto 0);
@@ -22,6 +23,7 @@ entity IDEX_Stage_Registers is
        ID_DA  : in STD_LOGIC_VECTOR (3 downto 0);
        EX_PC  : out STD_LOGIC_VECTOR (31 downto 0);
        EX_I   : out STD_LOGIC_VECTOR (31 downto 0);
+       EX_PCAddOne : out STD_LOGIC_VECTOR (31 downto 0);
        EX_A   : out STD_LOGIC_VECTOR (31 downto 0);
        EX_B   : out STD_LOGIC_VECTOR (31 downto 0);
        EX_KNS : out STD_LOGIC_VECTOR (31 downto 0);
@@ -53,6 +55,7 @@ begin
 
 ID_EX_I:   RegisterN generic map(n_bits=>32) port map(CLK=>CLK, D=>ID_I,     Enable=>Enable, Q=>EX_I);
 ID_EX_PC:  RegisterN generic map(n_bits=>32) port map(CLK=>CLK, D=>ID_PC,    Enable=>Enable, Q=>EX_PC);
+ID_EX_PCAddOne:  RegisterN generic map(n_bits=>32) port map(CLK=>CLK, D=>ID_PCAddOne,   Enable=>Enable, Q=>EX_PCAddOne);
 ID_EX_A:   RegisterN generic map(n_bits=>32) port map(CLK=>CLK, D=>ID_A,     Enable=>Enable, Q=>EX_A);
 ID_EX_B:   RegisterN generic map(n_bits=>32) port map(CLK=>CLK, D=>ID_B,     Enable=>Enable, Q=>EX_B);
 ID_EX_K:   RegisterN generic map(n_bits=>32) port map(CLK=>CLK, D=>ID_KNS,   Enable=>Enable, Q=>EX_KNS);

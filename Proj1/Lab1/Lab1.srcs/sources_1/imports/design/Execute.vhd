@@ -4,6 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Execute is
   Generic (n_bits : integer := 32);
   Port (
+    Enable : in std_logic;
     A      : in std_logic_vector(n_bits-1 downto 0);
     B      : in std_logic_vector(n_bits-1 downto 0);
     MA     : in std_logic;
@@ -32,7 +33,9 @@ component FunctionalUnit
 end component;
 
 component branchcontrol
-    Port ( PL : in STD_LOGIC_VECTOR (1 downto 0);
+    Port (
+           Enable : in STD_LOGIC;
+           PL : in STD_LOGIC_VECTOR (1 downto 0);
            BC : in STD_LOGIC_VECTOR(3 downto 0);
            PC : in STD_LOGIC_VECTOR (31 downto 0);
            AD : in STD_LOGIC_VECTOR (31 downto 0);
@@ -48,7 +51,7 @@ signal Flags : std_logic_vector(3 downto 0); -- {Z,C,N,V}
 begin
 
 -- select operands for the functional unit
-with MA select 
+with MA select
     OpA <= A when '0',
          KNS when others;
 
@@ -64,6 +67,6 @@ with MB select
 ALU: FunctionalUnit port map(A => OpA, B => OpB, FS => FS, D => DataD, FL => Flags);
 
 -- instantiate the Branch Control Unit
-UCS: BranchControl port map(PL=>PL, BC=>BC, PC=>PC, AD=>AD, Flags=>Flags, PCLoad=>PCLoadEnable, PCValue=>PCLoadValue, LinkEn=>LinkEn);
+UCS: BranchControl port map(Enable=>Enable,PL=>PL, BC=>BC, PC=>PC, AD=>AD, Flags=>Flags, PCLoad=>PCLoadEnable, PCValue=>PCLoadValue, LinkEn=>LinkEn);
 
 end Structural;
