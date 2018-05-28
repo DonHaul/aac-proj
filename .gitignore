@@ -82,6 +82,7 @@ Proj1\Lab1\Lab1.runs\
 #C-files
 #########
 !*.c
+!*.cu
 !*.h
 !*.elf
 !*.bmm
