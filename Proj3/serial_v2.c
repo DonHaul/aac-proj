@@ -9,11 +9,12 @@
   int main(int argc, char * argv[]) {
 
     int IE, JE, nsteps;
-    int i, j, n, is;
+    int i, j, n, is, jc, y, k;
+    int xstart;
     float pi = 3.141592653589793238462643;
     float * ez, * hx, * hy;
-    float dx, dt, epsz, mu, courant, cb, db, c, freq;
-    struct timespec Begin, End;
+    float dx, dt, epsz, mu, courant, cb, db, c, x, t, lambda, freq;
+    int tStart, tTotal;
 
     FILE * fp;
 
@@ -29,6 +30,8 @@
 
     printf("Running 2D FDTD algorithm with matrix of size %d x %d (%d steps)\n", IE, JE, nsteps);
 
+    struct timespec Begin, Step1, Step2, End;
+    double diff, accum;
 
     is = 10;
 
@@ -51,33 +54,36 @@
 
     freq = 50e9;
 
-    if (clock_gettime(CLOCK_REALTIME, &Begin) == -1) {
-      perror("Error in gettime");
-      exit(1);
-    }
-
+    accum = 0.0;
     for (n = 0; n < nsteps; n++) { // TIME
+      if (clock_gettime(CLOCK_REALTIME, &Begin) == -1) {
+        perror("Error in gettime");
+        exit(1);
+      }
 
       //Calculate the Ez field
       for (j = 0; j < JE; j++) { // x dimension
         for (i = 0; i < IE; i++) { // y dimension
-          if (j == 0) { // at x=0
-            if (i == 0 || i == IE - 1) // at x=0,y=0
-              ez[j * IE + i] = 0.0;
-            else
-              ez[j * IE + i] = ez[j * IE + i] + cb * (hy[j * IE + i] - hy[j * IE + (i - 1)] + hx[(j - 1 + JE) * IE + i] - hx[j * IE + i]);
+          if (i == is) {
+            ez[j * IE + i] = cos(2 * pi * freq * n * dt);
           } else {
-            if (i == 0 || i == IE - 1)
-              ez[j * IE + i] = 0.0;
-            else
-              ez[j * IE + i] = ez[j * IE + i] + cb * (hy[j * IE + i] - hy[j * IE + (i - 1)] + hx[(j - 1) * IE + i] - hx[j * IE + i]);
+            if (j == 0) { // at x=0
+              if (i == 0 || i == IE - 1) // at x=0,y=0
+                ez[j * IE + i] = 0.0;
+              else
+                ez[j * IE + i] = ez[j * IE + i] + cb * (hy[j * IE + i] - hy[j * IE + (i - 1)] + hx[(j - 1 + JE) * IE + i] - hx[j * IE + i]);
+            } else {
+              if (i == 0 || i == IE - 1)
+                ez[j * IE + i] = 0.0;
+              else
+                ez[j * IE + i] = ez[j * IE + i] + cb * (hy[j * IE + i] - hy[j * IE + (i - 1)] + hx[(j - 1) * IE + i] - hx[j * IE + i]);
+            }
           }
+
         }
       } // Ez calculation
 
-      for (j = 0; j < JE; j++) { // x dimension
-        ez[j * IE + is] = cos(2 * pi * freq * n * dt);
-      }
+      clock_gettime(CLOCK_REALTIME, &Step1);
 
       //Calculate the H field
       for (j = 0; j < JE; j++) {
@@ -95,14 +101,21 @@
         }
       } //Hx calculation
 
+      if (clock_gettime(CLOCK_REALTIME, &End) == -1) {
+        perror("Error in gettime");
+        exit(1);
+      }
+
+      diff = GET_TIME(Begin, End);
+      accum += diff;
+
+      printf("\n====Iteration (%d)====", n);
+      printf("\n======Total time: (%f)====", diff);
+      printf("\n======Part 1: (%f)====", GET_TIME(Begin, Step1));
+      printf("\n======Part 3: (%f)====", GET_TIME(Step2, End));
     }
 
-    if (clock_gettime(CLOCK_REALTIME, &End) == -1) {
-      perror("Error in gettime");
-      exit(1);
-    }
-
-    printf("\n\n====Total time: %f\n", GET_TIME(Begin, End));
+    printf("\n\n====Total time: %f\n", accum);
 
     // write output to file
     fp = fopen("output.txt", "w");
