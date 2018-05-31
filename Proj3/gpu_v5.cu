@@ -5,6 +5,7 @@
 #include <time.h>
 
 #define GET_TIME(X, Y) (((Y).tv_sec - (X).tv_sec) + ((Y).tv_nsec - (X).tv_nsec) / 1000000000.0)
+#define THREADS_PER_BLOCK 512
 
   __constant__ __device__ int IE_d;
   __constant__ __device__ int JE_d;
@@ -16,41 +17,48 @@
   __constant__ __device__ float db_d;
 
   __global__ void ezCalc ( float *ez, float *hx, float *hy ) {
-    int i = threadIdx.x, j = blockIdx.x;
+    int i, j = blockIdx.x;
 
-    if (j == 0) { // at x=0
-      if (i == 0 || i == IE_d - 1) // at x=0,y=0
-        ez[j * IE_d + i] = 0.0;
-      else
-        ez[j * IE_d + i] = ez[j * IE_d + i] + cb_d * (hy[j * IE_d + i] - hy[j * IE_d + (i - 1)] + hx[(j - 1 + JE_d) * IE_d + i] - hx[j * IE_d + i]);
-    } else {
-      if (i == 0 || i == IE_d - 1)
-        ez[j * IE_d + i] = 0.0;
-      else
-        ez[j * IE_d + i] = ez[j * IE_d + i] + cb_d * (hy[j * IE_d + i] - hy[j * IE_d + (i - 1)] + hx[(j - 1) * IE_d + i] - hx[j * IE_d + i]);
+    for (i = threadIdx.x; i < IE_d; i += blockDim.x) {
+      if (j == 0) { // at x=0
+        if (i == 0 || i == IE_d - 1) // at x=0,y=0
+          ez[j * IE_d + i] = 0.0;
+        else
+          ez[j * IE_d + i] = ez[j * IE_d + i] + cb_d * (hy[j * IE_d + i] - hy[j * IE_d + (i - 1)] + hx[(j - 1 + JE_d) * IE_d + i] - hx[j * IE_d + i]);
+      } else {
+        if (i == 0 || i == IE_d - 1)
+          ez[j * IE_d + i] = 0.0;
+        else
+          ez[j * IE_d + i] = ez[j * IE_d + i] + cb_d * (hy[j * IE_d + i] - hy[j * IE_d + (i - 1)] + hx[(j - 1) * IE_d + i] - hx[j * IE_d + i]);
+      }
     }
 
   }
 
   __global__ void ezCalc2 ( float *ez , int n ) {
-    int j = threadIdx.x;
+    int j;
 
-    ez[j * IE_d + is_d] = cos(2 * pi_d * freq_d * n * dt_d);
+    for (j = threadIdx.x; j < JE_d; j += blockDim.x) {
+      ez[j * IE_d + is_d] = cos(2 * pi_d * freq_d * n * dt_d);
+    }
 
   }
 
   __global__ void hCalc ( float *ez, float *hx, float *hy ) {
-    int i = threadIdx.x, j = blockIdx.x;
+    int i, j = blockIdx.x;
 
-    if (j + 1 == JE_d)
-      hx[j * IE_d + i] = hx[j * IE_d + i] + db_d * (ez[j * IE_d + i] - ez[i]);
-    else
-      hx[j * IE_d + i] = hx[j * IE_d + i] + db_d * (ez[j * IE_d + i] - ez[(j + 1) * JE_d + i]);
+    for (i = threadIdx.x; i < IE_d; i += blockDim.x) {
+      if (j + 1 == JE_d)
+        hx[j * IE_d + i] = hx[j * IE_d + i] + db_d * (ez[j * IE_d + i] - ez[i]);
+      else
+        hx[j * IE_d + i] = hx[j * IE_d + i] + db_d * (ez[j * IE_d + i] - ez[(j + 1) * JE_d + i]);
 
-    if (i == IE_d - 1)
-      hy[j * JE_d + i] = hy[j * JE_d + i] + db_d * (0 - ez[j * JE_d + i]);
-    else
-      hy[j * JE_d + i] = hy[j * JE_d + i] + db_d * (ez[j * JE_d + (i + 1)] - ez[j * JE_d + i]);
+      if (i == IE_d - 1)
+        hy[j * JE_d + i] = hy[j * JE_d + i] + db_d * (0 - ez[j * JE_d + i]);
+      else
+        hy[j * JE_d + i] = hy[j * JE_d + i] + db_d * (ez[j * JE_d + (i + 1)] - ez[j * JE_d + i]);
+    }
+
 
   }
 
@@ -132,17 +140,17 @@
       }
 
       //Calculate the Ez field
-      ezCalc<<<JE, IE>>>( ez_d, hx_d, hy_d );
+      ezCalc<<<JE, THREADS_PER_BLOCK>>>( ez_d, hx_d, hy_d );
 
       clock_gettime(CLOCK_REALTIME, &Step1);
 
       //Ez field generator (line)
-      ezCalc2<<<1, JE>>>( ez_d , n );
+      ezCalc2<<<1, THREADS_PER_BLOCK>>>( ez_d , n );
 
       clock_gettime(CLOCK_REALTIME, &Step2);
 
       //Calculate the H field
-      hCalc<<<JE, IE>>>( ez_d, hx_d, hy_d );
+      hCalc<<<JE, THREADS_PER_BLOCK>>>( ez_d, hx_d, hy_d );
 
       if (clock_gettime(CLOCK_REALTIME, &Step3) == -1) {
         perror("Error in gettime");
