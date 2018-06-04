@@ -8,9 +8,15 @@
 
 #define GET_TIME(X, Y) (((Y).tv_sec - (X).tv_sec) + ((Y).tv_nsec - (X).tv_nsec) / 1000000000.0)
 
-  __global__ void ezCalc(float *ez, float *hx, float *hy, int cb, int IE, int JE) {
+  __constant__ float cb_d;
+
+  __global__ void ezCalc(float *ez, float *hx, float *hy) {
+    int IE = blockDim.x;
+    int JE = IE;
     int i = threadIdx.x;
-    int j = blockIdx.y;
+    int j = blockIdx.x;
+    float cb = cb_d;
+    //int index = threadIdx.x + blockIdx.x * blockDim.x;
 
     if (j == 0) { // at x=0
       if (i == 0 || i == IE - 1) // at x=0,y=0
@@ -37,6 +43,12 @@
     int tStart, tTotal;
 
     FILE * fp;
+
+    //ta mal provavelmoente
+    dim3 block_config(IE,1,1);
+    dim3 grid_config(1,JE,1);
+
+
 
     if (argc != 4) {
       printf("Invalid arguments... please type:\n");
@@ -81,6 +93,8 @@
 
     freq = 50e9;
 
+    cudaMemcpyToSymbol(cb_d, &cb, sizeof(float));
+
     accum = 0.0;
     for (n = 0; n < nsteps; n++) { // TIME
       if (clock_gettime(CLOCK_REALTIME, &Begin) == -1) {
@@ -97,7 +111,8 @@
          JE blocks, one for each matrix line, and IE threads per block,
          one for each matrix element
        */
-      ezCalc<<<JE, IE>>>(ez_d, hx_d, hy_d, cb, IE, JE);
+
+      ezCalc<<<JE, IE>>>(ez_d, hx_d, hy_d);
 
       // Copy ez matrix to host
       cudaMemcpy(ez_h, ez_d, size, cudaMemcpyDeviceToHost);

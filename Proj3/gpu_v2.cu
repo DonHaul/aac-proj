@@ -6,11 +6,13 @@
 
 #define GET_TIME(X, Y) (((Y).tv_sec - (X).tv_sec) + ((Y).tv_nsec - (X).tv_nsec) / 1000000000.0)
 
-  __constant__ __device__ int IE_d;
-  __constant__ __device__ int JE_d;
-  __constant__ __device__ float cb_d;
+   __device__ int IE_d;
+   __device__ int JE_d;
+   __device__ float cb_d;
 
   __global__ void ezCalc ( float *ez, float *hx, float *hy ) {
+    //float cb = 133.105;
+    //int IE = 10, JE = 10;
     int i = threadIdx.x, j = blockIdx.x;
 
     if (j == 0) { // at x=0

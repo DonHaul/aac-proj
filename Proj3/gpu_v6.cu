@@ -20,17 +20,10 @@
     int i, j = blockIdx.x;
 
     for (i = threadIdx.x; i < IE_d; i += blockDim.x) {
-      if (j == 0) { // at x=0
-        if (i == 0 || i == IE_d - 1) // at x=0,y=0
-          ez[j * IE_d + i] = 0.0;
-        else
-          ez[j * IE_d + i] = ez[j * IE_d + i] + cb_d * (hy[j * IE_d + i] - hy[j * IE_d + (i - 1)] + hx[(j - 1 + JE_d) * IE_d + i] - hx[j * IE_d + i]);
-      } else {
-        if (i == 0 || i == IE_d - 1)
-          ez[j * IE_d + i] = 0.0;
-        else
-          ez[j * IE_d + i] = ez[j * IE_d + i] + cb_d * (hy[j * IE_d + i] - hy[j * IE_d + (i - 1)] + hx[(j - 1) * IE_d + i] - hx[j * IE_d + i]);
-      }
+      if (j == 0) // at x=0
+        ez[j * IE_d + i] = ez[j * IE_d + i] + cb_d * (hy[j * IE_d + i] - hy[j * IE_d + (i - 1)] + hx[(j - 1 + JE_d) * IE_d + i] - hx[j * IE_d + i]);
+      else
+        ez[j * IE_d + i] = ez[j * IE_d + i] + cb_d * (hy[j * IE_d + i] - hy[j * IE_d + (i - 1)] + hx[(j - 1) * IE_d + i] - hx[j * IE_d + i]);
     }
 
   }
@@ -39,7 +32,9 @@
     int j;
 
     for (j = threadIdx.x; j < JE_d; j += blockDim.x) {
+      ez[j * IE_d] = 0.0;
       ez[j * IE_d + is_d] = cos(2 * pi_d * freq_d * n * dt_d);
+      ez[(j+1) * IE_d - 1] = 0.0;
     }
 
   }
@@ -113,9 +108,9 @@
     hx = (float * ) calloc(size, sizeof(float));
     hy = (float * ) calloc(size, sizeof(float));
 
-    cudaMalloc( (void **) &ez_d, size * sizeof(float));
-    cudaMalloc( (void **) &hx_d, size * sizeof(float));
-    cudaMalloc( (void **) &hy_d, size * sizeof(float));
+    cudaMalloc( (void **) &ez_d, (size+1) * sizeof(float));
+    cudaMalloc( (void **) &hx_d, (size+1) * sizeof(float));
+    cudaMalloc( (void **) &hy_d, (size+1) * sizeof(float));
 
     freq = 50e9;
     cudaMemcpyToSymbol(freq_d, &freq, sizeof(float), 0, cudaMemcpyHostToDevice);
@@ -129,9 +124,9 @@
     }
 
     // Transfer initial matrices to gpu
-    cudaMemcpy( ez_d, ez, size * sizeof(float), cudaMemcpyHostToDevice );
-    cudaMemcpy( hx_d, hx, size * sizeof(float), cudaMemcpyHostToDevice );
-    cudaMemcpy( hy_d, hy, size * sizeof(float), cudaMemcpyHostToDevice );
+    cudaMemcpy( ez_d+1, ez, size * sizeof(float), cudaMemcpyHostToDevice );
+    cudaMemcpy( hx_d+1, hx, size * sizeof(float), cudaMemcpyHostToDevice );
+    cudaMemcpy( hy_d+1, hy, size * sizeof(float), cudaMemcpyHostToDevice );
 
     for (n = 0; n < nsteps; n++) { // TIME
       if (clock_gettime(CLOCK_REALTIME, &Step0) == -1) {
@@ -140,17 +135,17 @@
       }
 
       //Calculate the Ez field
-      ezCalc<<<JE, THREADS_PER_BLOCK>>>( ez_d, hx_d, hy_d );
+      ezCalc<<<JE, THREADS_PER_BLOCK>>>( ez_d+1, hx_d+1, hy_d+1 );
 
       clock_gettime(CLOCK_REALTIME, &Step1);
 
       //Ez field generator (line)
-      ezCalc2<<<1, THREADS_PER_BLOCK>>>( ez_d , n );
+      ezCalc2<<<1, THREADS_PER_BLOCK>>>( ez_d+1 , n );
 
       clock_gettime(CLOCK_REALTIME, &Step2);
 
       //Calculate the H field
-      hCalc<<<JE, THREADS_PER_BLOCK>>>( ez_d, hx_d, hy_d );
+      hCalc<<<JE, THREADS_PER_BLOCK>>>( ez_d+1, hx_d+1, hy_d+1 );
 
       if (clock_gettime(CLOCK_REALTIME, &Step3) == -1) {
         perror("Error in gettime");
@@ -160,9 +155,9 @@
     }
 
     // Retrieve matrices from gpu
-    cudaMemcpy( ez, ez_d, size * sizeof(float), cudaMemcpyDeviceToHost );
-    cudaMemcpy( hx, hx_d, size * sizeof(float), cudaMemcpyDeviceToHost );
-    cudaMemcpy( hy, hy_d, size * sizeof(float), cudaMemcpyDeviceToHost );
+    cudaMemcpy( ez, ez_d+1, size * sizeof(float), cudaMemcpyDeviceToHost );
+    cudaMemcpy( hx, hx_d+1, size * sizeof(float), cudaMemcpyDeviceToHost );
+    cudaMemcpy( hy, hy_d+1, size * sizeof(float), cudaMemcpyDeviceToHost );
 
     if (clock_gettime(CLOCK_REALTIME, &End) == -1) {
       perror("Error in gettime");

@@ -20,20 +20,18 @@
     int i, j = blockIdx.x;
 
     for (i = threadIdx.x; i < IE_d; i += blockDim.x) {
-      if (j == 0) { // at x=0
-        if (i == 0 || i == IE_d - 1) // at x=0,y=0
-          ez[j * IE_d + i] = 0.0;
-        else
-          ez[j * IE_d + i] = ez[j * IE_d + i] + cb_d * (hy[j * IE_d + i] - hy[j * IE_d + (i - 1)] + hx[(j - 1 + JE_d) * IE_d + i] - hx[j * IE_d + i]);
-      } else {
-        if (i == 0 || i == IE_d - 1)
-          ez[j * IE_d + i] = 0.0;
-        else
-          ez[j * IE_d + i] = ez[j * IE_d + i] + cb_d * (hy[j * IE_d + i] - hy[j * IE_d + (i - 1)] + hx[(j - 1) * IE_d + i] - hx[j * IE_d + i]);
+
+      if (i == 0 || i == IE_d - 1)
+        ez[j * IE_d + i] = 0.0;
+
+      if (j != 0 && !(i == 0 || i == IE_d - 1)) { // at x=0
+        ez[j * IE_d + i] = ez[j * IE_d + i] + cb_d * (hy[j * IE_d + i] - hy[j * IE_d + (i - 1)] + hx[(j - 1 + JE_d) * IE_d + i] - hx[j * IE_d + i]);
+      } else if (!(i == 0 || i == IE_d - 1))
+        ez[j * IE_d + i] = ez[j * IE_d + i] + cb_d * (hy[j * IE_d + i] - hy[j * IE_d + (i - 1)] + hx[(j - 1) * IE_d + i] - hx[j * IE_d + i]);
       }
     }
 
-  }
+  
 
   __global__ void ezCalc2 ( float *ez , int n ) {
     int j;

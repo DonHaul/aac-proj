@@ -17,9 +17,10 @@
   __constant__ __device__ float db_d;
 
   __global__ void ezCalc ( float *ez, float *hx, float *hy ) {
-    int i, j = blockIdx.x;
+    int i = blockIdx.y * blockDim.x + threadIdx.x;
+    int j = blockIdx.x;
 
-    for (i = threadIdx.x; i < IE_d; i += blockDim.x) {
+    if (i < IE_d) {
       if (j == 0) { // at x=0
         if (i == 0 || i == IE_d - 1) // at x=0,y=0
           ez[j * IE_d + i] = 0.0;
@@ -45,9 +46,10 @@
   }
 
   __global__ void hCalc ( float *ez, float *hx, float *hy ) {
-    int i, j = blockIdx.x;
+    int i = blockIdx.y * blockDim.x + threadIdx.x;
+    int j = blockIdx.x;
 
-    for (i = threadIdx.x; i < IE_d; i += blockDim.x) {
+    if (i < IE_d) {
       if (j + 1 == JE_d)
         hx[j * IE_d + i] = hx[j * IE_d + i] + db_d * (ez[j * IE_d + i] - ez[i]);
       else
@@ -59,7 +61,6 @@
         hy[j * JE_d + i] = hy[j * JE_d + i] + db_d * (ez[j * JE_d + (i + 1)] - ez[j * JE_d + i]);
     }
 
-
   }
 
   int main(int argc, char * argv[]) {
@@ -70,7 +71,7 @@
     float * ez, * hx, * hy;
     float * ez_d, *hx_d, * hy_d;
     float dx, dt, epsz, mu, courant, cb, db, c, freq;
-    int size;
+    int size, grid_x, grid_y;
     struct timespec Begin, Step0, Step1, Step2, Step3, End;
     FILE * fp;
 
@@ -108,6 +109,10 @@
     printf("Coefficients are: dt=%g cb=%g db=%g\n", dt, cb, db);
 
     size = IE * JE;
+    grid_x = JE;
+    grid_y = (IE + THREADS_PER_BLOCK - 1)/THREADS_PER_BLOCK;
+
+    dim3 grid(grid_x, grid_y, 1);
 
     ez = (float * ) calloc(size, sizeof(float));
     hx = (float * ) calloc(size, sizeof(float));
@@ -140,7 +145,7 @@
       }
 
       //Calculate the Ez field
-      ezCalc<<<JE, THREADS_PER_BLOCK>>>( ez_d, hx_d, hy_d );
+      ezCalc<<<grid, THREADS_PER_BLOCK>>>( ez_d, hx_d, hy_d );
 
       clock_gettime(CLOCK_REALTIME, &Step1);
 
@@ -150,7 +155,7 @@
       clock_gettime(CLOCK_REALTIME, &Step2);
 
       //Calculate the H field
-      hCalc<<<JE, THREADS_PER_BLOCK>>>( ez_d, hx_d, hy_d );
+      hCalc<<<grid, THREADS_PER_BLOCK>>>( ez_d, hx_d, hy_d );
 
       if (clock_gettime(CLOCK_REALTIME, &Step3) == -1) {
         perror("Error in gettime");
