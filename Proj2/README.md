@@ -1,0 +1,2 @@
+# Projetos de Arquitetura Avançadas de Computadores
+Usando o simulador gem5 devem ser comparadas 2 arquiteturas de processadores, uma in-order e outra out-of-order. Para isso devem ser criados 2 programas .c , um com o objetivo de obter o maior speedup  possivel e outro o menor speedup possivel

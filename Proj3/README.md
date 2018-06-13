@@ -1,0 +1,2 @@
+# Projetos de Arquitetura Avançadas de Computadores
+Comparar a execução de um codigo .c num processador vs processador+GPU, são criados varias versoes de kernels com o objectivo de maximizar o speed-up
