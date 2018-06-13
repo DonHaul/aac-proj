@@ -6,6 +6,8 @@
 #Exclude all
 #########
 *
+!Proj2
+!Proj3
 Proj1\Lab1\Lab1.runs\
 !*/
 !.gitignore
