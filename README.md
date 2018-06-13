@@ -1,7 +1,2 @@
-# aac-proj
-
-Link relatório
-https://www.overleaf.com/14840445qdngbyfccskw
-
-Link spread
-https://docs.google.com/spreadsheets/d/1jBUidAamXvBdM1A41TIhY7IpMEgAwV6BHs6H8cLblkE/edit?usp=sharing
+# Projetos de Arquitetura Avançadas de Computadores
+Aqui encontram-se os relatórios e sources, dos 3 projetos de Arquiteturas Avançadas de Computadores Lecionadas pelo grande prof.Pedro Tomás no 2ºsemestre 17/18 no IST
