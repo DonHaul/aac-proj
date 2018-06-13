@@ -4,9 +4,13 @@
 #include <math.h>
 #include <time.h>
 
+//execution time macro
 #define GET_TIME(X, Y) (((Y).tv_sec - (X).tv_sec) + ((Y).tv_nsec - (X).tv_nsec) / 1000000000.0)
+
+// threads per block
 #define THREADS_PER_BLOCK 1024
 
+  //
   __constant__ __device__ int IE_d;
   __constant__ __device__ int JE_d;
   __constant__ __device__ float cb_d;
@@ -16,10 +20,11 @@
   __constant__ __device__ float dt_d;
   __constant__ __device__ float db_d;
 
-  __global__ void ezCalc ( float *ez, float *hx, float *hy, int group ) {
-    int i = threadIdx.x * group, j = blockIdx.x, it;
+  __global__ void ezCalc ( float *ez, float *hx, float *hy ) {
+    int i = blockIdx.y * blockDim.x + threadIdx.x;
+    int j = blockIdx.x;
 
-    for (it = 0; it < group && i < JE_d; it++, i++) {
+    if (i < IE_d) {
       if (j == 0) { // at x=0
         if (i == 0 || i == IE_d - 1) // at x=0,y=0
           ez[j * IE_d + i] = 0.0;
@@ -45,9 +50,10 @@
   }
 
   __global__ void hCalc ( float *ez, float *hx, float *hy ) {
-    int i, j = blockIdx.x;
+    int i = blockIdx.y * blockDim.x + threadIdx.x;
+    int j = blockIdx.x;
 
-    for (i = threadIdx.x; i < IE_d; i += blockDim.x) {
+    if (i < IE_d) {
       if (j + 1 == JE_d)
         hx[j * IE_d + i] = hx[j * IE_d + i] + db_d * (ez[j * IE_d + i] - ez[i]);
       else
@@ -59,7 +65,6 @@
         hy[j * JE_d + i] = hy[j * JE_d + i] + db_d * (ez[j * JE_d + (i + 1)] - ez[j * JE_d + i]);
     }
 
-
   }
 
   int main(int argc, char * argv[]) {
@@ -70,7 +75,7 @@
     float * ez, * hx, * hy;
     float * ez_d, *hx_d, * hy_d;
     float dx, dt, epsz, mu, courant, cb, db, c, freq;
-    int size, group;
+    int size, grid_x, grid_y;
     struct timespec Begin, Step0, Step1, Step2, Step3, End;
     FILE * fp;
 
@@ -108,7 +113,10 @@
     printf("Coefficients are: dt=%g cb=%g db=%g\n", dt, cb, db);
 
     size = IE * JE;
-    group = (IE + THREADS_PER_BLOCK - 1)/THREADS_PER_BLOCK;
+    grid_x = JE;
+    grid_y = (IE + THREADS_PER_BLOCK - 1)/THREADS_PER_BLOCK;
+
+    dim3 grid(grid_x, grid_y, 1);
 
     ez = (float * ) calloc(size, sizeof(float));
     hx = (float * ) calloc(size, sizeof(float));
@@ -141,7 +149,7 @@
       }
 
       //Calculate the Ez field
-      ezCalc<<<JE, THREADS_PER_BLOCK>>>( ez_d, hx_d, hy_d, group );
+      ezCalc<<<grid, THREADS_PER_BLOCK>>>( ez_d, hx_d, hy_d );
 
       clock_gettime(CLOCK_REALTIME, &Step1);
 
@@ -151,7 +159,7 @@
       clock_gettime(CLOCK_REALTIME, &Step2);
 
       //Calculate the H field
-      hCalc<<<JE, THREADS_PER_BLOCK>>>( ez_d, hx_d, hy_d );
+      hCalc<<<grid, THREADS_PER_BLOCK>>>( ez_d, hx_d, hy_d );
 
       if (clock_gettime(CLOCK_REALTIME, &Step3) == -1) {
         perror("Error in gettime");
